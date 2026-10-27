@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUTURA | Haute Sartorial Weave & Hand-Stitched Form</title>
+  <meta name="description" content="Bespoke tailoring, rare botanical dyes, and timeless silhouettes crafted in Florence and Kyoto. Individually numbered editions.">
+  <meta name="keywords" content="Sutura, Haute Couture, Bespoke Tailoring, Florentine Overcoat, Botanical Indigo, Raw Mulberry Silk, Biella Virgin Wool">
+  <meta name="theme-color" content="#0F0E24">
+
+  <!-- Brand Favicon (Vector SVG + Multi-Resolution PNG/ICO matching Sutura Logo Insignia) -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SUTURA — The Art of the Stitched Silhouette">
+  <meta property="og:description" content="Crafted at the intersection of Florentine tailoring and Kyoto botanical dyeing. Every garment is individually cut and numbered.">
+  <meta property="og:image" content="assets/images/hero/hero-main.webp">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SUTURA | Haute Sartorial Weave">
+  <meta property="twitter:description" content="Crafted at the intersection of Florentine tailoring and Kyoto botanical dyeing.">
+  <meta name="twitter:image" content="assets/images/hero/hero-main.webp">
+
+  <!-- Google Fonts: Editorial Serif (Playfair Display) + Modern Sans (Manrope) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- Confetti library for celebration (Pure zero-dependency script) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- GSAP 3 & ScrollTrigger for Cinematic 60fps Motion (GPU Accelerated) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Three.js (Lightweight, Isolated Essential Real 3D Feature - 8 GB RAM Optimized) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- HTTP Cache Invalidation for instant hot reload -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Vanilla CSS Design System (Cache-busting version query) -->
+  <link rel="stylesheet" href="styles.css?v=9.2">
+  <style>
+    html, body {
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+    }
+    /* Haute Sartorial Luxury Scrollbar System */
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #C9A24D rgba(9, 8, 23, 0.35);
+    }
+    .bg-weave-light, .bg-weave-light * {
+      scrollbar-color: #C9A24D rgba(15, 14, 36, 0.08);
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(9, 8, 23, 0.45);
+      border-radius: 9999px;
+    }
+    .bg-weave-light ::-webkit-scrollbar-track {
+      background: rgba(15, 14, 36, 0.06);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #C9A24D 0%, #E08A2B 100%);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:horizontal {
+      background: linear-gradient(90deg, #C9A24D 0%, #E08A2B 100%);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, #DEBB67 0%, #F0A145 100%);
+      box-shadow: 0 0 10px rgba(224, 138, 43, 0.45);
+    }
+    ::-webkit-scrollbar-thumb:horizontal:hover {
+      background: linear-gradient(90deg, #DEBB67 0%, #F0A145 100%);
+      box-shadow: 0 0 10px rgba(224, 138, 43, 0.45);
+    }
+    .luxe-scrollbar {
+      scrollbar-width: thin;
+      scrollbar-color: #C9A24D rgba(15, 14, 36, 0.06);
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+    .luxe-scrollbar::-webkit-scrollbar {
+      height: 5px;
+    }
+    .luxe-scrollbar::-webkit-scrollbar-track {
+      background: rgba(15, 14, 36, 0.06);
+      border-radius: 9999px;
+      margin: 0 8px;
+    }
+    .luxe-scrollbar::-webkit-scrollbar-thumb {
+      background: linear-gradient(90deg, #C9A24D 0%, #E08A2B 100%);
+      border-radius: 9999px;
+    }
+    .luxe-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(90deg, #DEBB67 0%, #F0A145 100%);
+      box-shadow: 0 0 8px rgba(224, 138, 43, 0.45);
+    }
+
+    @keyframes marquee-scroll {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+    .marquee-wrapper {
+      overflow: hidden !important;
+      width: 100% !important;
+      white-space: nowrap !important;
+      user-select: none !important;
+      display: flex !important;
+      align-items: center !important;
+      min-height: 56px !important;
+      padding: 1.35rem 0 !important;
+      box-sizing: border-box !important;
+      background: linear-gradient(90deg, #090817, #5E1A24, #090817) !important;
+      border-top: 1px solid rgba(201, 162, 77, 0.35) !important;
+      border-bottom: 1px solid rgba(201, 162, 77, 0.35) !important;
+      position: relative !important;
+      z-index: 5 !important;
+    }
+    .marquee-content {
+      display: flex !important;
+      align-items: center !important;
+      width: max-content !important;
+      flex-shrink: 0 !important;
+      white-space: nowrap !important;
+      animation: marquee-scroll 28s linear infinite !important;
+      animation-play-state: running !important;
+      will-change: transform !important;
+      height: auto !important;
+    }
+    .marquee-item {
+      flex-shrink: 0 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 1.25rem !important;
+      margin: 0 1.75rem !important;
+      font-size: 0.85rem !important;
+      line-height: 1.6 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.22em !important;
+      color: #F4EDE0 !important;
+      white-space: nowrap !important;
+      padding: 4px 0 !important;
+    }
+    .marquee-item > span:first-child {
+      display: inline-block !important;
+      line-height: 1.6 !important;
+      vertical-align: middle !important;
+    }
+    .marquee-separator {
+      color: #E08A2B !important;
+      font-size: 0.85rem !important;
+      line-height: 1 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      vertical-align: middle !important;
+      transform: translateY(-0.5px) !important;
+    }
+
+    /* Card Typography: Guaranteed Radiant Silk Ivory text inside dark cards within light sections */
+    .bg-weave-light .tilt-card,
+    .bg-weave-light .tilt-card-inner,
+    .bg-weave-light #categories-grid,
+    .bg-weave-light #products-grid,
+    .bg-weave-light #testimonials-card-container,
+    .bg-weave-light #lookbook-stage {
+      color: #F4EDE0 !important;
+    }
+
+    .tilt-card h1, .tilt-card h2, .tilt-card h3, .tilt-card h4,
+    .tilt-card-inner h1, .tilt-card-inner h2, .tilt-card-inner h3, .tilt-card-inner h4,
+    .bg-weave-light .tilt-card h1,
+    .bg-weave-light .tilt-card h2,
+    .bg-weave-light .tilt-card h3,
+    .bg-weave-light .tilt-card h4,
+    .bg-weave-light .tilt-card-inner h1,
+    .bg-weave-light .tilt-card-inner h2,
+    .bg-weave-light .tilt-card-inner h3,
+    .bg-weave-light .tilt-card-inner h4,
+    #categories-grid h3,
+    #categories-grid .font-serif,
+    #products-grid h3,
+    #products-grid .font-serif,
+    #testimonials-card-container h4,
+    #testimonials-card-container p.font-serif,
+    #lookbook-stage h1,
+    #lookbook-stage h2,
+    #lookbook-stage h3,
+    #lookbook-stage h4,
+    #lookbook-stage .lookbook-title,
+    .bg-weave-light #lookbook-stage h3,
+    .bg-weave-light #lookbook-stage .lookbook-title,
+    #patron-login-prompt h3,
+    #patron-login-prompt .font-serif,
+    #patron-vault-view h3,
+    #patron-vault-view h4,
+    .bg-weave-light #patron-login-prompt h3,
+    .bg-weave-light #patron-login-prompt .font-serif,
+    .bg-weave-light #patron-vault-view h3,
+    .bg-weave-light #patron-vault-view h4 {
+      color: #F4EDE0 !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .tilt-card p,
+    .tilt-card-inner p,
+    .bg-weave-light .tilt-card p,
+    .bg-weave-light .tilt-card-inner p,
+    #categories-grid p,
+    #products-grid p {
+      color: #DDD0BB !important;
+      opacity: 0.95 !important;
+    }
+  </style>
+</head>
+<body class="bg-weave-dark">
+
+  <!-- 1. Preloader with SVG Logo Stroke Animation -->
+  <div id="preloader">
+    <svg viewBox="0 0 100 100" class="preloader-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Outer Bespoke Hand-Stitched Dial -->
+      <circle cx="50" cy="50" r="45" stroke="#C9A24D" stroke-width="1.3" stroke-dasharray="3.5 3.5" opacity="0.6"/>
+      <circle cx="50" cy="50" r="41" stroke="#C9A24D" stroke-width="0.75" opacity="0.35"/>
+      <polygon points="50,5 51.5,8 50,11 48.5,8" fill="#C9A24D"/>
+      <polygon points="50,89 51.5,92 50,95 48.5,92" fill="#C9A24D"/>
+      <polygon points="5,50 8,51.5 11,50 8,48.5" fill="#C9A24D"/>
+      <polygon points="89,50 92,51.5 95,50 92,48.5" fill="#C9A24D"/>
+      <!-- Flowing Silk Thread Path -->
+      <path class="stroke-draw" d="M 24 76 C 14 62, 18 45, 34 46 C 45 47, 52 40, 50 32 C 48 22, 60 16, 70 23 C 78 28, 80 38, 74 45 C 66 53, 53 56, 46 66 C 40 75, 48 83, 58 81 C 66 79, 71 72, 75 66" stroke="#E08A2B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Precision Tailoring Needle -->
+      <line class="stroke-draw" x1="20" y1="80" x2="80" y2="20" stroke="#C9A24D" stroke-width="2.8" stroke-linecap="round"/>
+      <polygon points="77,23 83.5,16.5 80.5,26.5" fill="#FAF7F2"/>
+      <ellipse cx="26" cy="74" rx="1.2" ry="4.5" transform="rotate(45 26 74)" stroke="#FAF7F2" stroke-width="0.8"/>
+      <!-- Monogram 'S' Stroke Arc -->
+      <path class="stroke-draw" d="M 62 29 C 58 24.5, 52 24, 46.5 24 C 37 24, 32.5 29.5, 32.5 36.5 C 32.5 43.5, 37.5 47.5, 45.5 51 C 55.5 55, 63.5 60, 63.5 68 C 63.5 77.5, 55.5 83.5, 45 83.5 C 36 83.5, 29.5 78, 28 72" stroke="#FAF7F2" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <h2 class="font-serif" style="font-size: 1.85rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--color-silk-ivory); margin-bottom: 0.25rem;">
+      Sutura
+    </h2>
+    <p style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.4em; color: var(--color-antique-brass);">
+      Firenze • Kyoto
+    </p>
+    <button id="skip-preloader" style="position: absolute; bottom: 2rem; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.2em; color: rgba(244,237,224,0.4); cursor: pointer;">
+      Skip Intro
+    </button>
+  </div>
+
+  <!-- 2. Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- 3. Custom Cursor -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-ring"><span class="custom-cursor-label"></span></div>
+
+  <!-- 4 & 5. Sticky Glass Site Header (Announcement Bar + Strictly 4 Items Navbar) -->
+  <header class="site-header">
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+      <div class="container announcement-container">
+        <span class="announcement-symbol">✦</span>
+        <span id="announcement-text">
+          Complimentary express courier & custom garment bag on orders over $250
+        </span>
+        <a href="#collection" class="announcement-link">Explore Drop →</a>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="nav-bar">
+      <div class="container nav-container">
+        <!-- Logo Wordmark -->
+        <a href="#home" class="logo-link">
+          <div class="logo-icon-box">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="nav-sutura-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FAF7F2"/>
+                  <stop offset="30%" stop-color="#DEBB67"/>
+                  <stop offset="70%" stop-color="#C9A24D"/>
+                  <stop offset="100%" stop-color="#9E7828"/>
+                </linearGradient>
+                <linearGradient id="nav-sutura-needle" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#C9A24D"/>
+                  <stop offset="45%" stop-color="#FAF7F2"/>
+                  <stop offset="70%" stop-color="#DEBB67"/>
+                  <stop offset="100%" stop-color="#FFFFFF"/>
+                </linearGradient>
+                <linearGradient id="nav-sutura-thread" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#F0A145"/>
+                  <stop offset="60%" stop-color="#E08A2B"/>
+                  <stop offset="100%" stop-color="#B86A18"/>
+                </linearGradient>
+                <filter id="nav-needle-glow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#E08A2B" flood-opacity="0.35"/>
+                </filter>
+              </defs>
+
+              <!-- Outer Bespoke Hand-Stitched Dial -->
+              <circle cx="50" cy="50" r="45" stroke="url(#nav-sutura-gold)" stroke-width="1.3" stroke-dasharray="3.5 3.5" opacity="0.6"/>
+              <circle cx="50" cy="50" r="41" stroke="url(#nav-sutura-gold)" stroke-width="0.75" opacity="0.35"/>
+
+              <!-- Cardinal Atelier Marks -->
+              <polygon points="50,5 51.5,8 50,11 48.5,8" fill="url(#nav-sutura-gold)"/>
+              <polygon points="50,89 51.5,92 50,95 48.5,92" fill="url(#nav-sutura-gold)"/>
+              <polygon points="5,50 8,51.5 11,50 8,48.5" fill="url(#nav-sutura-gold)"/>
+              <polygon points="89,50 92,51.5 95,50 92,48.5" fill="url(#nav-sutura-gold)"/>
+
+              <!-- Sinuous Silk Thread Weaving Through Monogram -->
+              <path d="M 24 76 C 14 62, 18 45, 34 46 C 45 47, 52 40, 50 32 C 48 22, 60 16, 70 23 C 78 28, 80 38, 74 45 C 66 53, 53 56, 46 66 C 40 75, 48 83, 58 81 C 66 79, 71 72, 75 66" 
+                    fill="none" stroke="url(#nav-sutura-thread)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+
+              <!-- Fine Tailoring Needle Piercing Diagonally -->
+              <line x1="20" y1="80" x2="80" y2="20" stroke="url(#nav-sutura-needle)" stroke-width="2.8" stroke-linecap="round"/>
+              <polygon points="77,23 83.5,16.5 80.5,26.5" fill="#FAF7F2" filter="url(#nav-needle-glow)"/>
+              <ellipse cx="26" cy="74" rx="1.2" ry="4.5" transform="rotate(45 26 74)" fill="#0F0E24" stroke="url(#nav-sutura-gold)" stroke-width="0.8"/>
+
+              <!-- Haute Couture Monogram 'S' with Modulated Elegance -->
+              <path d="
+                M 63 26
+                C 65 26, 66.5 27.5, 66.5 29.5
+                C 66.5 31.8, 64.5 33.5, 62 33.5
+                C 59.8 33.5, 58.5 32.2, 58.5 30.5
+                C 55.5 26.5, 51.5 24.5, 46.5 24.5
+                C 38 24.5, 32.5 29.5, 32.5 36.5
+                C 32.5 43.5, 37.5 47.8, 45 50.8
+                L 48.5 52.2
+                C 56.5 55.5, 63 60.5, 63 68.5
+                C 63 77.5, 55.5 83.5, 45 83.5
+                C 39.5 83.5, 34 81, 30.5 76.5
+                C 31.2 75.8, 31.8 74.8, 31.8 73.5
+                C 31.8 71.2, 29.8 69.5, 27.5 69.5
+                C 25.2 69.5, 23.5 71.2, 23.5 73.5
+                C 23.5 77.2, 27.5 82, 33.5 85
+                C 37 86.8, 41.5 87.5, 46 87.5
+                C 59 87.5, 68.5 79.5, 68.5 68
+                C 68.5 59, 62.5 53.5, 53.5 49.5
+                L 50 48
+                C 43 45, 38 41.5, 38 35.5
+                C 38 29.8, 42.5 25.5, 49.5 25.5
+                C 54.8 25.5, 59.8 27.8, 63 31.5
+                Z
+              " fill="url(#nav-sutura-gold)"/>
+            </svg>
+          </div>
+          <div class="logo-text-box">
+            <span class="font-serif logo-title">Sutura</span>
+            <span class="logo-subtitle">Firenze • Kyoto</span>
+          </div>
+        </a>
+
+        <!-- Strictly 4 Anchor Links -->
+        <nav class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#collection" class="nav-link">Collection</a></li>
+            <li><a href="#story" class="nav-link">Our Story</a></li>
+            <li><a href="#track-order" class="nav-link">Track Order</a></li>
+          </ul>
+        </nav>
+
+        <!-- Nav Action Buttons: Patron Account & Cart -->
+        <div class="nav-actions">
+          <button id="nav-account-btn" class="nav-btn-account" aria-label="Sign In">
+            <span>Sign In</span>
+          </button>
+
+          <button id="nav-wishlist-btn" class="nav-btn-cart" aria-label="View Saved Wishlist" title="View Wishlist" style="position: relative;">
+            <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            <span id="wishlist-count-badge" style="position: absolute; top: -6px; right: -6px; width: 18px; height: 18px; border-radius: 50%; background: #f43f5e; color: #fff; font-size: 0.65rem; font-weight: 800; display: none; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(244,63,94,0.5);">0</span>
+          </button>
+
+          <button id="nav-cart-btn" class="nav-btn-cart" aria-label="Open Shopping Bag">
+            <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 9H18L16.8 20.4C16.7 21.3 16 22 15.1 22H8.9C8 22 7.3 21.3 7.2 20.4L6 9Z"/>
+              <path d="M9 9V6.5C9 4.84 10.34 3.5 12 3.5C13.66 3.5 15 4.84 15 6.5V9"/>
+            </svg>
+            <span id="cart-count-badge">0</span>
+          </button>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Navigation">
+            ☰
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Fullscreen Overlay -->
+  <div id="mobile-menu-overlay">
+    <button id="close-mobile-menu" aria-label="Close menu" style="position: absolute; top: 1.5rem; right: 1.5rem; font-size: 1.6rem; color: var(--color-silk-ivory); background: none; border: none; cursor: pointer; padding: 6px; line-height: 1;">✕</button>
+
+    <!-- Strictly 4 Navigation Links -->
+    <nav style="display: flex; flex-direction: column; gap: 1.5rem; text-align: center;">
+      <a href="#home" class="font-serif mobile-nav-link" style="font-size: 1.55rem; letter-spacing: 0.08em; color: var(--color-silk-ivory); text-decoration: none;">Home</a>
+      <a href="#collection" class="font-serif mobile-nav-link" style="font-size: 1.55rem; letter-spacing: 0.08em; color: var(--color-silk-ivory); text-decoration: none;">Collection</a>
+      <a href="#story" class="font-serif mobile-nav-link" style="font-size: 1.55rem; letter-spacing: 0.08em; color: var(--color-silk-ivory); text-decoration: none;">Our Story</a>
+      <a href="#track-order" class="font-serif mobile-nav-link" style="font-size: 1.55rem; letter-spacing: 0.08em; color: var(--color-silk-ivory); text-decoration: none;">Track Order</a>
+    </nav>
+
+    <div style="width: 50px; height: 1px; background: rgba(201, 162, 77, 0.3); margin: 0.4rem auto;"></div>
+
+    <!-- The 3 Action Buttons Kept Inside the Hamburger Menu -->
+    <div class="mobile-menu-actions" style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+      <!-- 1. Sign In / Account -->
+      <button id="mobile-account-btn" class="nav-btn-account" aria-label="Sign In" style="padding: 0.6rem 1.25rem;">
+        <span>Sign In</span>
+      </button>
+
+      <!-- 2. Saved Wishlist -->
+      <button id="mobile-wishlist-btn" class="nav-btn-cart" aria-label="View Saved Wishlist" title="View Wishlist" style="position: relative;">
+        <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+        <span id="mobile-wishlist-count-badge" class="wishlist-count-badge" style="position: absolute; top: -6px; right: -6px; width: 18px; height: 18px; border-radius: 50%; background: #f43f5e; color: #fff; font-size: 0.65rem; font-weight: 800; display: none; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(244,63,94,0.5);">0</span>
+      </button>
+
+      <!-- 3. Shopping Bag / Cart -->
+      <button id="mobile-cart-btn" class="nav-btn-cart" aria-label="Open Shopping Bag" style="position: relative;">
+        <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9H18L16.8 20.4C16.7 21.3 16 22 15.1 22H8.9C8 22 7.3 21.3 7.2 20.4L6 9Z"/>
+          <path d="M9 9V6.5C9 4.84 10.34 3.5 12 3.5C13.66 3.5 15 4.84 15 6.5V9"/>
+        </svg>
+        <span id="mobile-cart-count-badge" class="cart-count-badge" style="position: absolute; top: -4px; right: -4px; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 50%; background: var(--color-burnt-saffron); color: var(--color-midnight-indigo); font-size: 0.65rem; font-weight: 800; display: none; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(224, 138, 43, 0.5);">0</span>
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <!-- =====================================================================
+         SECTION 1: HOME
+         ===================================================================== -->
+    <section id="home" class="section-padding" style="min-height: 100vh; padding-top: 9.5rem; display: flex; align-items: center; position: relative; overflow: hidden;">
+      <!-- Subtle ambient background glow -->
+      <div style="position: absolute; top: 15%; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(201,162,77,0.08) 0%, rgba(224,138,43,0.04) 40%, transparent 70%); pointer-events: none; z-index: 0;"></div>
+
+      <div class="container" style="position: relative; z-index: 1;">
+        <div class="hero-layout-grid">
+          <!-- Headline & CTAs -->
+          <div class="hero-content-col" style="max-width: 650px;">
+            <div class="hero-badge" style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: var(--radius-full); background: rgba(21, 20, 51, 0.85); border: 1px solid rgba(201,162,77,0.4); margin-bottom: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+              <span class="three-status-dot"></span>
+              <span style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--color-antique-brass); font-weight: 700;">Autumn / Winter 2026 Drop</span>
+            </div>
+
+            <!-- Single H1 on Page (Strict SEO Rule) with Staggered Lines -->
+            <h1 class="hero-title" style="font-size: clamp(2.8rem, 5.8vw, 5.2rem); line-height: 1.05; margin-bottom: 1.5rem;">
+              <span class="hero-line"><span class="hero-word">Haute</span> <span class="hero-word">Sartorial</span></span>
+              <span class="hero-line"><span class="hero-word font-serif" style="font-style: italic; font-weight: 300; color: var(--color-antique-brass);">Weave &amp; Form</span></span>
+            </h1>
+
+            <p class="hero-subtitle" style="font-size: clamp(0.95rem, 1.8vw, 1.15rem); color: var(--color-silk-200); font-weight: 300; line-height: 1.7; margin-bottom: 2.2rem; max-width: 540px;">
+              Crafted at the intersection of Florentine tailoring and Kyoto botanical dyeing. Every garment is individually cut, stitched with pure silk thread, and signed by its master artisan.
+            </p>
+
+            <div class="hero-ctas" style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem;">
+              <a href="#collection" class="btn-primary magnetic-btn" id="hero-cta-shop">
+                <span class="magnetic-btn-inner">Shop the Drop ↓</span>
+              </a>
+              <a href="#lookbook" class="btn-outline magnetic-btn" id="hero-cta-lookbook">
+                <span class="magnetic-btn-inner">View Lookbook ✦</span>
+              </a>
+            </div>
+
+            <!-- Badges with 2.5D Elevation -->
+            <div class="hero-metrics">
+              <div>
+                <strong class="font-serif hero-metric-val">Grade 6A</strong>
+                <span class="hero-metric-label">Raw Mulberry Silk</span>
+              </div>
+              <div>
+                <strong class="font-serif hero-metric-val">18 Dips</strong>
+                <span class="hero-metric-label">Fermented Indigo</span>
+              </div>
+              <div>
+                <strong class="font-serif hero-metric-val">60 Pieces</strong>
+                <span class="hero-metric-label">Numbered Runs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Editorial Visual with 2.5D Layered Depth -->
+          <div class="hero-visual-stage">
+            <div class="hero-visual-stage-inner">
+              <!-- Main Editorial 2.5D Perspective Card -->
+              <div class="tilt-card-wrapper hero-main-card">
+                <div class="tilt-card animated-border" style="box-shadow: 0 35px 80px rgba(0,0,0,0.9);">
+                  <div class="tilt-card-glare"></div>
+                  <div class="tilt-card-holo"></div>
+                  <div class="tilt-card-shimmer"></div>
+                  <div class="tilt-card-stitch"></div>
+                  
+                  <div class="img-mask-reveal" style="position: relative; width: 100%; aspect-ratio: 3/4; overflow: hidden; border-radius: var(--radius-lg);">
+                    <img src="assets/images/hero/hero-main.webp" alt="Editorial model wearing tailored midnight indigo Sutura overcoat with saffron silk lapels" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,14,36,0.92) 0%, rgba(15,14,36,0.2) 50%, transparent 100%);"></div>
+                    
+                    <!-- Editorial Product Badge (Positioned at bottom, always unobstructed & aligned) -->
+                    <div class="hero-product-badge layer-depth-2">
+                      <div class="hero-badge-meta">
+                        <span class="hero-badge-tag">Signature Cut</span>
+                        <h4 class="font-serif hero-badge-title">The Midnight Sutura Overcoat</h4>
+                      </div>
+                      <span class="hero-badge-price">$680 USD</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating Macro Twill Card with GSAP Parallax (Positioned safely in upper quadrant) -->
+              <div class="hero-macro-twill">
+                <div class="img-mask-reveal" style="width: 100%; height: 100%;">
+                  <img src="assets/images/hero/hero-secondary.webp" alt="Extreme macro detail of midnight indigo wool twill and gold thread" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <span class="hero-macro-pill">Atelier Twill • 1:1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infinite Marquee Strip -->
+    <div class="marquee-wrapper" style="display: flex; align-items: center; min-height: 56px; padding: 1.35rem 0;">
+      <div class="marquee-content">
+        <div class="marquee-item"><span>Handcrafted in Florence &amp; Kyoto</span><span class="marquee-separator">✦</span></div>
+        <div class="marquee-item"><span>Complimentary Global Express Over $250</span><span class="marquee-separator">✦</span></div>
+        <div class="marquee-item"><span>Grade-6A Raw Mulberry Silk &amp; Biella Wool</span><span class="marquee-separator">✦</span></div>
+        <div class="marquee-item"><span>Strictly Numbered Limited Runs (50–120 pieces)</span><span class="marquee-separator">✦</span></div>
+        <div class="marquee-item"><span>30-Day Bespoke Fitting Privilege</span><span class="marquee-separator">✦</span></div>
+        <div class="marquee-item"><span>18-Dip Fermented Sukumo Indigo</span><span class="marquee-separator">✦</span></div>
+        <!-- Duplicated for seamless loop -->
+        <div class="marquee-item"><span>Handcrafted in Florence &amp; Kyoto</span><span class="marquee-separator">✦</span></div>
+        <div class="marquee-item"><span>Complimentary Global Express Over $250</span><span class="marquee-separator">✦</span></div>
+        <div class="marquee-item"><span>Grade-6A Raw Mulberry Silk &amp; Biella Wool</span><span class="marquee-separator">✦</span></div>
+        <div class="marquee-item"><span>Strictly Numbered Limited Runs (50–120 pieces)</span><span class="marquee-separator">✦</span></div>
+        <div class="marquee-item"><span>30-Day Bespoke Fitting Privilege</span><span class="marquee-separator">✦</span></div>
+        <div class="marquee-item"><span>18-Dip Fermented Sukumo Indigo</span><span class="marquee-separator">✦</span></div>
+      </div>
+    </div>
+
+    <!-- Featured Categories (3D Tilt Cards) -->
+    <section class="section-padding bg-weave-light">
+      <div class="container">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto 4rem;">
+          <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--color-burnt-saffron); font-weight: 700; display: block; margin-bottom: 0.4rem;">Curated Silhouettes</span>
+          <h2 style="font-size: 2.5rem; margin-bottom: 0.8rem;">The Autumn Pillars</h2>
+          <div style="width: 50px; height: 2px; background: var(--color-antique-brass); margin: 0 auto 1rem;"></div>
+          <p style="font-size: 0.9rem; color: rgba(15,14,36,0.75);">Select a tailored division to explore numbered drops woven from raw silk, virgin wool, and Belgian flax.</p>
+        </div>
+
+        <div id="categories-grid" class="grid-4"></div>
+      </div>
+    </section>
+
+    <!-- Brand Covenant / USPs (Centered 3D Tilt Cards) -->
+    <section class="section-padding bg-weave-dark" style="border-top: 1px solid rgba(201,162,77,0.2);">
+      <div class="container">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto 4rem;">
+          <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--color-antique-brass); font-weight: 700; display: block; margin-bottom: 0.4rem;">Uncompromising Standards</span>
+          <h2 style="font-size: 2.5rem; margin-bottom: 0.8rem;">The Sutura Covenant</h2>
+          <div style="width: 50px; height: 2px; background: var(--color-burnt-saffron); margin: 0 auto 1rem;"></div>
+          <p style="font-size: 0.9rem; color: var(--color-silk-300);">Four foundational pledges that govern every cut of cloth, stitch of silk, and shipment dispatched.</p>
+        </div>
+
+        <div id="usps-grid" class="grid-4"></div>
+      </div>
+    </section>
+
+    <!-- Lookbook Chapter Acts Gallery -->
+    <section id="lookbook" class="section-padding bg-weave-light">
+      <div class="container">
+        <div class="lookbook-section-header">
+          <div class="lookbook-header-titles">
+            <span class="lookbook-header-tag">Visual Chronicle • Autumn 2026</span>
+            <h2 class="lookbook-header-title">The Florence &amp; Kyoto Lookbook</h2>
+          </div>
+          <p class="lookbook-header-desc">Five theatrical chapters chronicling the synthesis of Italian structural tailoring and Japanese botanical dye alchemy.</p>
+        </div>
+
+        <div id="lookbook-tabs" class="luxe-scrollbar" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 0.85rem; margin-bottom: 1.5rem;"></div>
+        <div id="lookbook-stage" style="border-radius: var(--radius-lg); overflow: hidden; background: var(--color-midnight-indigo); color: var(--color-silk-ivory); border: 1px solid rgba(201,162,77,0.3); box-shadow: var(--shadow-luxe);"></div>
+      </div>
+    </section>
+
+    <!-- Stats Counters -->
+    <section class="section-padding bg-weave-dark" style="border-top: 1px solid rgba(201,162,77,0.2);">
+      <div class="container">
+        <div id="stats-grid" class="grid-4"></div>
+      </div>
+    </section>
+
+    <!-- Discerning Patrons Testimonials -->
+    <section class="section-padding bg-weave-light">
+      <div class="container">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto 3.5rem;">
+          <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--color-burnt-saffron); font-weight: 700; display: block; margin-bottom: 0.4rem;">Patron Reflections</span>
+          <h2 style="font-size: 2.5rem; margin-bottom: 0.8rem;">Voices of the Discerning</h2>
+          <div style="width: 50px; height: 2px; background: var(--color-antique-brass); margin: 0 auto;"></div>
+        </div>
+
+        <div id="testimonials-card-container"></div>
+      </div>
+    </section>
+
+    <!-- Press Strip & Guild Newsletter -->
+    <section class="section-padding bg-weave-dark" style="border-top: 1px solid rgba(201,162,77,0.2);">
+      <div class="container">
+        <!-- Press Strip -->
+        <div style="text-align: center; margin-bottom: 4rem;">
+          <span style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.4em; color: var(--color-antique-brass); display: block; margin-bottom: 2rem;">Editorial Endorsements</span>
+          <div class="grid-4 editorial-press-grid">
+            <div style="padding: 1.5rem; border-radius: 12px; background: rgba(21, 20, 51, 0.6); border: 1px solid rgba(201,162,77,0.2); text-align: center;">
+              <strong class="font-serif" style="font-size: 1.15rem; letter-spacing: 0.2em; display: block; margin-bottom: 0.4rem; color: var(--color-burnt-saffron);">VOGUE HAUTE</strong>
+              <p style="font-size: 0.75rem; font-style: italic; color: var(--color-silk-300);">&ldquo;Atelier Sutura restores spiritual gravity to modern fashion with its hand-stitched craft.&rdquo;</p>
+            </div>
+            <div style="padding: 1.5rem; border-radius: 12px; background: rgba(21, 20, 51, 0.6); border: 1px solid rgba(201,162,77,0.2); text-align: center;">
+              <strong class="font-serif" style="font-size: 1.15rem; letter-spacing: 0.2em; display: block; margin-bottom: 0.4rem; color: var(--color-burnt-saffron);">GQ STYLE</strong>
+              <p style="font-size: 0.75rem; font-style: italic; color: var(--color-silk-300);">&ldquo;The single greatest double-faced overcoat of the decade. Exceptional tailoring.&rdquo;</p>
+            </div>
+            <div style="padding: 1.5rem; border-radius: 12px; background: rgba(21, 20, 51, 0.6); border: 1px solid rgba(201,162,77,0.2); text-align: center;">
+              <strong class="font-serif" style="font-size: 1.15rem; letter-spacing: 0.2em; display: block; margin-bottom: 0.4rem; color: var(--color-burnt-saffron);">MONOCLE</strong>
+              <p style="font-size: 0.75rem; font-style: italic; color: var(--color-silk-300);">&ldquo;A blueprint for the conscious luxury house: zero mass production, botanical dyes.&rdquo;</p>
+            </div>
+            <div style="padding: 1.5rem; border-radius: 12px; background: rgba(21, 20, 51, 0.6); border: 1px solid rgba(201,162,77,0.2); text-align: center;">
+              <strong class="font-serif" style="font-size: 1.15rem; letter-spacing: 0.2em; display: block; margin-bottom: 0.4rem; color: var(--color-burnt-saffron);">HARPER'S BAZAAR</strong>
+              <p style="font-size: 0.75rem; font-style: italic; color: var(--color-silk-300);">&ldquo;Silhouettes that command silence. The marriage of Florence structure with Kyoto indigo.&rdquo;</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Newsletter Subscription with 10% privilege -->
+        <div class="newsletter-card" style="max-width: 600px; margin: 0 auto; text-align: center; padding: 3rem 2rem; border-radius: var(--radius-lg); background: rgba(21, 20, 51, 0.85); border: 1px solid rgba(201,162,77,0.35); box-shadow: var(--shadow-luxe);">
+          <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--color-burnt-saffron); font-weight: 700; display: block; margin-bottom: 0.5rem;">Private Salon Access</span>
+          <h3 class="font-serif" style="font-size: 2.2rem; margin-bottom: 0.75rem;">Join the Sutura Guild</h3>
+          <p style="font-size: 0.85rem; color: var(--color-silk-200); line-height: 1.6; margin-bottom: 1.5rem;">
+            Receive private allocations for upcoming numbered drops and an immediate <strong style="color: var(--color-burnt-saffron);">10% inaugural privilege</strong> on your first order.
+          </p>
+
+          <form id="newsletter-form" class="newsletter-form" style="display: flex; gap: 8px; max-width: 440px; margin: 0 auto;">
+            <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Enter your private email..." required style="flex: 1; min-width: 0; padding: 0.85rem 1.25rem; border-radius: 9999px; background: var(--color-midnight-dark); border: 1px solid rgba(201,162,77,0.3); font-size: 0.8rem; outline: none; color: var(--color-silk-ivory);">
+            <button type="submit" class="btn-primary newsletter-btn" style="padding: 0.85rem 1.6rem; white-space: nowrap; flex-shrink: 0;">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 2: COLLECTION (CATALOG)
+         ===================================================================== -->
+    <section id="collection" class="section-padding bg-weave-light">
+      <div class="container">
+        <!-- Section Header with Allocation Countdown -->
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 3rem;">
+          <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--color-burnt-saffron); font-weight: 700; display: block; margin-bottom: 0.4rem;">Autumn / Winter Catalog</span>
+          <h2 style="font-size: 2.6rem; margin-bottom: 0.8rem;">The Numbered Collection</h2>
+          <div style="width: 50px; height: 2px; background: var(--color-antique-brass); margin: 0 auto 1rem;"></div>
+          <p style="font-size: 0.9rem; color: rgba(15,14,36,0.75); margin-bottom: 1.25rem;">Every creation is individually numbered and cut upon order allocation. Explore fluid silhouettes woven from organic fibers.</p>
+          
+          <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 18px; border-radius: 9999px; background: var(--color-midnight-indigo); color: var(--color-silk-ivory); font-size: 0.72rem; border: 1px solid rgba(201,162,77,0.3);">
+            <span>⏱ Autumn Allocation: <strong style="color: var(--color-burnt-saffron);">34 / 60 Pieces Claimed</strong></span>
+          </div>
+        </div>
+
+        <!-- Sticky Filter Bar -->
+        <div style="position: sticky; top: 75px; z-index: 40; background: rgba(244, 237, 224, 0.96); backdrop-filter: blur(12px); border-top: 1px solid rgba(15,14,36,0.1); border-bottom: 1px solid rgba(15,14,36,0.1); padding: 1rem 0; margin-bottom: 2.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <!-- Category Pills -->
+            <div class="cat-pills-row luxe-scrollbar" style="display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; flex-wrap: nowrap; white-space: nowrap; max-width: 100%;">
+              <button class="cat-pill active" data-cat="all" style="padding: 6px 16px; border-radius: 9999px; font-size: 0.72rem; text-transform: uppercase; font-weight: 700; background: var(--color-midnight-indigo); color: var(--color-silk-ivory); white-space: nowrap; flex-shrink: 0; display: inline-flex; align-items: center;">All Works</button>
+              <button class="cat-pill" data-cat="women" style="padding: 6px 16px; border-radius: 9999px; font-size: 0.72rem; text-transform: uppercase; font-weight: 700; background: rgba(233, 223, 206, 0.6); color: var(--color-midnight-indigo); white-space: nowrap; flex-shrink: 0; display: inline-flex; align-items: center;">Femme</button>
+              <button class="cat-pill" data-cat="men" style="padding: 6px 16px; border-radius: 9999px; font-size: 0.72rem; text-transform: uppercase; font-weight: 700; background: rgba(233, 223, 206, 0.6); color: var(--color-midnight-indigo); white-space: nowrap; flex-shrink: 0; display: inline-flex; align-items: center;">Homme</button>
+              <button class="cat-pill" data-cat="unisex" style="padding: 6px 16px; border-radius: 9999px; font-size: 0.72rem; text-transform: uppercase; font-weight: 700; background: rgba(233, 223, 206, 0.6); color: var(--color-midnight-indigo); white-space: nowrap; flex-shrink: 0; display: inline-flex; align-items: center;">Genderless</button>
+              <button class="cat-pill" data-cat="accessories" style="padding: 6px 16px; border-radius: 9999px; font-size: 0.72rem; text-transform: uppercase; font-weight: 700; background: rgba(233, 223, 206, 0.6); color: var(--color-midnight-indigo); white-space: nowrap; flex-shrink: 0; display: inline-flex; align-items: center;">Leathercraft</button>
+              <button class="cat-pill" data-cat="wishlist" id="cat-pill-wishlist" style="padding: 6px 16px; border-radius: 9999px; font-size: 0.72rem; text-transform: uppercase; font-weight: 700; background: rgba(233, 223, 206, 0.6); color: var(--color-midnight-indigo); display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; flex-shrink: 0;"><span style="color: #f43f5e; font-size: 0.85rem; line-height: 1;">♥</span><span style="white-space: nowrap;">Wishlist (<span id="wishlist-pill-count">0</span>)</span></button>
+            </div>
+
+            <!-- Search & Sort -->
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+              <input type="text" id="catalog-search" placeholder="Search silhouettes..." style="padding: 6px 14px; border-radius: 9999px; background: rgba(233, 223, 206, 0.8); border: 1px solid rgba(15,14,36,0.15); font-size: 0.75rem; outline: none; width: 170px;">
+              <select id="catalog-sort" style="padding: 6px 12px; border-radius: 9999px; background: rgba(233, 223, 206, 0.8); border: 1px solid rgba(15,14,36,0.15); font-size: 0.75rem; outline: none;">
+                <option value="featured">Sort: Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating">Patron Rating</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Secondary Filters: Size, Color Swatches, Price Range -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid rgba(15,14,36,0.08); flex-wrap: wrap; gap: 1rem;">
+            <!-- Size Chips -->
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span style="font-size: 0.7rem; text-transform: uppercase; font-weight: 700; color: rgba(15,14,36,0.6); margin-right: 4px;">Size:</span>
+              <button class="size-chip active" data-size="all" style="width: 26px; height: 26px; border-radius: 50%; font-size: 0.68rem; font-weight: 700; background: var(--color-midnight-indigo); color: var(--color-silk-ivory);">All</button>
+              <button class="size-chip" data-size="XS" style="width: 26px; height: 26px; border-radius: 50%; font-size: 0.68rem; font-weight: 700; background: rgba(233, 223, 206, 0.6); color: var(--color-midnight-indigo);">XS</button>
+              <button class="size-chip" data-size="S" style="width: 26px; height: 26px; border-radius: 50%; font-size: 0.68rem; font-weight: 700; background: rgba(233, 223, 206, 0.6); color: var(--color-midnight-indigo);">S</button>
+              <button class="size-chip" data-size="M" style="width: 26px; height: 26px; border-radius: 50%; font-size: 0.68rem; font-weight: 700; background: rgba(233, 223, 206, 0.6); color: var(--color-midnight-indigo);">M</button>
+              <button class="size-chip" data-size="L" style="width: 26px; height: 26px; border-radius: 50%; font-size: 0.68rem; font-weight: 700; background: rgba(233, 223, 206, 0.6); color: var(--color-midnight-indigo);">L</button>
+              <button class="size-chip" data-size="XL" style="width: 26px; height: 26px; border-radius: 50%; font-size: 0.68rem; font-weight: 700; background: rgba(233, 223, 206, 0.6); color: var(--color-midnight-indigo);">XL</button>
+            </div>
+
+            <!-- Color Swatches -->
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span style="font-size: 0.7rem; text-transform: uppercase; font-weight: 700; color: rgba(15,14,36,0.6); margin-right: 4px;">Palette:</span>
+              <button class="color-swatch-filter" data-color="all" style="font-size: 0.68rem; text-decoration: underline; font-weight: 700; margin-right: 4px;">All</button>
+              <button class="color-swatch-filter" data-color="Midnight Indigo" style="width: 18px; height: 18px; border-radius: 50%; background: #0F0E24; border: 1px solid rgba(0,0,0,0.2);"></button>
+              <button class="color-swatch-filter" data-color="Raw Silk Ivory" style="width: 18px; height: 18px; border-radius: 50%; background: #F4EDE0; border: 1px solid rgba(0,0,0,0.2);"></button>
+              <button class="color-swatch-filter" data-color="Burnt Saffron" style="width: 18px; height: 18px; border-radius: 50%; background: #E08A2B; border: 1px solid rgba(0,0,0,0.2);"></button>
+              <button class="color-swatch-filter" data-color="Deep Oxblood" style="width: 18px; height: 18px; border-radius: 50%; background: #5E1A24; border: 1px solid rgba(0,0,0,0.2);"></button>
+              <button class="color-swatch-filter" data-color="Sage Linen" style="width: 18px; height: 18px; border-radius: 50%; background: #A9B5A0; border: 1px solid rgba(0,0,0,0.2);"></button>
+            </div>
+
+            <!-- Price Slider -->
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 0.7rem; text-transform: uppercase; font-weight: 700; color: rgba(15,14,36,0.6);">Max:</span>
+              <input type="range" id="price-slider" min="250" max="850" step="25" value="850" style="accent-color: var(--color-burnt-saffron); width: 100px;">
+              <span id="price-val" style="font-size: 0.75rem; font-weight: 700; color: var(--color-burnt-saffron); font-family: monospace;">$850 USD</span>
+            </div>
+
+            <!-- Size Guide Link -->
+            <button id="open-size-guide-filter" style="font-size: 0.75rem; color: var(--color-midnight-indigo); text-decoration: underline;">
+              📏 Size &amp; Fit Guide
+            </button>
+          </div>
+        </div>
+
+        <!-- 3D Tilt Product Grid (STRICT: All text and icons centered) -->
+        <div id="products-grid" class="grid-4"></div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 3: OUR STORY
+         ===================================================================== -->
+    <section id="story" class="section-padding bg-weave-dark" style="border-top: 1px solid rgba(201,162,77,0.2);">
+      <div class="container">
+        <!-- Story Headline -->
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 4rem;">
+          <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--color-burnt-saffron); font-weight: 700; display: block; margin-bottom: 0.4rem;">Florentine Craft &amp; Kyoto Alchemy</span>
+          <h2 style="font-size: 2.6rem; margin-bottom: 0.8rem;">The Chronicle of Sutura</h2>
+          <div style="width: 50px; height: 2px; background: var(--color-antique-brass); margin: 0 auto 1rem;"></div>
+          <p style="font-size: 0.9rem; color: var(--color-silk-200);">Founded in Florence in 1988, Sutura was established on a radical proposition: that true haute couture should reject assembly lines in favor of individual artisan signatures.</p>
+        </div>
+
+        <!-- Heritage Timeline (3 Stages) -->
+        <div class="grid-3" style="margin-bottom: 5rem; text-align: center;">
+          <div style="padding: 2rem; border-radius: var(--radius-lg); background: rgba(21, 20, 51, 0.8); border: 1px solid rgba(201,162,77,0.3); text-align: center;">
+            <strong style="font-size: 2.2rem; color: var(--color-burnt-saffron); font-family: monospace; display: block; margin-bottom: 0.4rem;">1988</strong>
+            <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Via de' Tornabuoni Salon</h3>
+            <p style="font-size: 0.8rem; color: var(--color-silk-300); line-height: 1.6;">Elena Sutura opens her private studio in central Florence, tailoring architectural overcoats for European patrons.</p>
+          </div>
+          <div style="padding: 2rem; border-radius: var(--radius-lg); background: rgba(21, 20, 51, 0.8); border: 1px solid rgba(201,162,77,0.3); text-align: center;">
+            <strong style="font-size: 2.2rem; color: var(--color-burnt-saffron); font-family: monospace; display: block; margin-bottom: 0.4rem;">2014</strong>
+            <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.5rem;">The Kyoto Dye Union</h3>
+            <p style="font-size: 0.8rem; color: var(--color-silk-300); line-height: 1.6;">Partnership with master dyer Kenji Takahashi to introduce 18-dip Sukumo fermented indigo and wild saffron extraction.</p>
+          </div>
+          <div style="padding: 2rem; border-radius: var(--radius-lg); background: rgba(21, 20, 51, 0.8); border: 1px solid rgba(201,162,77,0.3); text-align: center;">
+            <strong style="font-size: 2.2rem; color: var(--color-burnt-saffron); font-family: monospace; display: block; margin-bottom: 0.4rem;">2026</strong>
+            <h3 class="font-serif" style="font-size: 1.25rem; margin-bottom: 0.5rem;">Direct-to-Patron Era</h3>
+            <p style="font-size: 0.8rem; color: var(--color-silk-300); line-height: 1.6;">Bypassing wholesale distributors. Every garment is allocated directly to discerning patrons in 64 nations.</p>
+          </div>
+        </div>
+
+        <!-- Craft Metier Step Cards -->
+        <div style="margin-bottom: 5rem;">
+          <div style="text-align: center; margin-bottom: 3rem;">
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--color-antique-brass); font-weight: 700;">The Metier</span>
+            <h3 class="font-serif" style="font-size: 2.2rem;">From Raw Spool to Finished Form</h3>
+          </div>
+          <div id="metier-steps-grid" class="metier-steps-grid">
+            <div class="metier-step-card" style="border-radius: var(--radius-md); overflow: hidden; background: rgba(21, 20, 51, 0.8); border: 1px solid rgba(201,162,77,0.25); text-align: center;">
+              <img src="assets/images/story/craft-design.webp?v=2" alt="Design & Draping" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+              <div style="padding: 1.25rem; text-align: center;">
+                <span style="font-size: 0.65rem; color: var(--color-burnt-saffron); font-weight: 800; display: block; margin-bottom: 0.2rem;">STEP 01</span>
+                <h4 class="font-serif" style="font-size: 1.05rem; margin: 0.2rem 0 0.4rem; text-align: center;">Architectural Draping</h4>
+                <p style="font-size: 0.75rem; color: var(--color-silk-300); line-height: 1.5; text-align: center;">Elena drapes raw muslin on antique wooden mannequins to sculpt balanced silhouettes.</p>
+              </div>
+            </div>
+            <div class="metier-step-card" style="border-radius: var(--radius-md); overflow: hidden; background: rgba(21, 20, 51, 0.8); border: 1px solid rgba(201,162,77,0.25); text-align: center;">
+              <img src="assets/images/story/craft-fabric.webp?v=3" alt="Botanical Fermentation" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+              <div style="padding: 1.25rem; text-align: center;">
+                <span style="font-size: 0.65rem; color: var(--color-burnt-saffron); font-weight: 800; display: block; margin-bottom: 0.2rem;">STEP 02</span>
+                <h4 class="font-serif" style="font-size: 1.05rem; margin: 0.2rem 0 0.4rem; text-align: center;">Botanical Fermentation</h4>
+                <p style="font-size: 0.75rem; color: var(--color-silk-300); line-height: 1.5; text-align: center;">Living Sukumo indigo cultures fermented with wood ash lye and Tuscan saffron petals.</p>
+              </div>
+            </div>
+            <div class="metier-step-card" style="border-radius: var(--radius-md); overflow: hidden; background: rgba(21, 20, 51, 0.8); border: 1px solid rgba(201,162,77,0.25); text-align: center;">
+              <img src="assets/images/story/craft-stitch.webp?v=2" alt="Hand Needlework" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+              <div style="padding: 1.25rem; text-align: center;">
+                <span style="font-size: 0.65rem; color: var(--color-burnt-saffron); font-weight: 800; display: block; margin-bottom: 0.2rem;">STEP 03</span>
+                <h4 class="font-serif" style="font-size: 1.05rem; margin: 0.2rem 0 0.4rem; text-align: center;">Hand Needlework</h4>
+                <p style="font-size: 0.75rem; color: var(--color-silk-300); line-height: 1.5; text-align: center;">Matteo Rossi shears contours individually and stitches with antique twin-needle methods.</p>
+              </div>
+            </div>
+            <div class="metier-step-card" style="border-radius: var(--radius-md); overflow: hidden; background: rgba(21, 20, 51, 0.8); border: 1px solid rgba(201,162,77,0.25); text-align: center;">
+              <img src="assets/images/story/craft-quality.webp?v=3" alt="Tolerance Audit" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+              <div style="padding: 1.25rem; text-align: center;">
+                <span style="font-size: 0.65rem; color: var(--color-burnt-saffron); font-weight: 800; display: block; margin-bottom: 0.2rem;">STEP 04</span>
+                <h4 class="font-serif" style="font-size: 1.05rem; margin: 0.2rem 0 0.4rem; text-align: center;">48-Point Quality Audit</h4>
+                <p style="font-size: 0.75rem; color: var(--color-silk-300); line-height: 1.5; text-align: center;">Rigorous inspection of seam roll, buttonhole tension, and bespoke drape fall.</p>
+              </div>
+            </div>
+            <div class="metier-step-card" style="border-radius: var(--radius-md); overflow: hidden; background: rgba(21, 20, 51, 0.8); border: 1px solid rgba(201,162,77,0.25); text-align: center;">
+              <img src="assets/images/story/craft-ship.webp?v=2" alt="Wax-Sealed Presentation" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+              <div style="padding: 1.25rem; text-align: center;">
+                <span style="font-size: 0.65rem; color: var(--color-burnt-saffron); font-weight: 800; display: block; margin-bottom: 0.2rem;">STEP 05</span>
+                <h4 class="font-serif" style="font-size: 1.05rem; margin: 0.2rem 0 0.4rem; text-align: center;">Wax-Sealed Dispatch</h4>
+                <p style="font-size: 0.75rem; color: var(--color-silk-300); line-height: 1.5; text-align: center;">Enfolded in tissue inside our midnight presentation case with hot beeswax seal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Metier Talisman Studio (Florentine & Kyoto Alchemy) -->
+        <div style="margin-bottom: 5.5rem;" class="three-metier-studio">
+          <div style="text-align: center; margin-bottom: 2.5rem;">
+            <div style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 14px; border-radius: var(--radius-full); background: rgba(201,162,77,0.12); border: 1px solid rgba(201,162,77,0.35); margin-bottom: 0.8rem;">
+              <span class="three-status-dot"></span>
+              <span style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--color-burnt-saffron); font-weight: 700;">Artisanal Sartorial Specimen</span>
+            </div>
+            <h3 class="font-serif" style="font-size: 2.3rem; margin-bottom: 0.5rem;">The Golden Weft Talisman</h3>
+            <p style="font-size: 0.85rem; color: var(--color-silk-300); max-width: 580px; margin: 0 auto;">
+              The Möbius weave seal cast in solid Florentine bronze and gilded with botanical Sukumo lacquer. Select a finish to inspect the alloy provenance and hand-struck sigil in high fidelity.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center; max-width: 980px; margin: 0 auto; padding: 2.5rem; border-radius: var(--radius-lg); background: rgba(15,14,36,0.85); border: 1px solid rgba(201,162,77,0.35); box-shadow: var(--shadow-luxe);" class="animated-border talisman-studio-card">
+            <!-- Left: Talisman Specimen Display with Interactive 3D Tilt & Micro-Zoom -->
+            <div class="talisman-stage-col">
+              <div class="talisman-stage-wrapper tilt-card-wrapper" id="metier-talisman-stage" style="perspective: 1000px; transform-style: preserve-3d;">
+                <div class="talisman-card tilt-card" id="talisman-interactive-card" style="position: relative; width: 100%; aspect-ratio: 1/1; border-radius: 16px; overflow: hidden; background: radial-gradient(circle at center, rgba(30, 28, 70, 0.95) 0%, rgba(10, 9, 25, 0.98) 100%); border: 1px solid rgba(201,162,77,0.35); box-shadow: 0 16px 40px rgba(0,0,0,0.65), 0 0 25px rgba(201,162,77,0.12); cursor: zoom-in; transform: translateZ(0); transition: box-shadow 0.3s ease, border-color 0.3s ease;">
+                  <div class="tilt-card-shimmer"></div>
+                  
+                  <!-- Main Talisman Specimen Image -->
+                  <img id="talisman-specimen-img" src="assets/images/story/talisman-brass.webp" alt="Florentine Möbius Talisman" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                  
+                  <!-- Interactive Hover Inspect Lens Indicator -->
+                  <div class="three-hint-badge" id="talisman-badge" style="position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); white-space: nowrap; pointer-events: none;">
+                    <span>✦</span> Click to Zoom • Move to Tilt
+                  </div>
+
+                  <!-- Gold Leaf Corner Accents -->
+                  <div style="position: absolute; top: 12px; left: 12px; width: 14px; height: 14px; border-top: 1px solid var(--color-antique-brass); border-left: 1px solid var(--color-antique-brass); pointer-events: none;"></div>
+                  <div style="position: absolute; top: 12px; right: 12px; width: 14px; height: 14px; border-top: 1px solid var(--color-antique-brass); border-right: 1px solid var(--color-antique-brass); pointer-events: none;"></div>
+                  <div style="position: absolute; bottom: 12px; left: 12px; width: 14px; height: 14px; border-bottom: 1px solid var(--color-antique-brass); border-left: 1px solid var(--color-antique-brass); pointer-events: none;"></div>
+                  <div style="position: absolute; bottom: 12px; right: 12px; width: 14px; height: 14px; border-bottom: 1px solid var(--color-antique-brass); border-right: 1px solid var(--color-antique-brass); pointer-events: none;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Interactive Controls & Craft Provenance -->
+            <div class="talisman-narrative-col" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+              <div>
+                <span id="talisman-subtitle" style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--color-antique-brass); font-weight: 700; display: block; margin-bottom: 0.4rem;">Metier Metallurgy &amp; Alchemy</span>
+                <h4 id="talisman-title" class="font-serif" style="font-size: 1.7rem; margin-bottom: 0.8rem; color: var(--color-silk-ivory); transition: color 0.3s ease;">Florentine Möbius Sigil</h4>
+                <p id="talisman-desc" style="font-size: 0.82rem; color: var(--color-silk-200); line-height: 1.7; margin-bottom: 1.5rem; min-height: 48px; transition: opacity 0.3s ease;">
+                  Every Sutura garment carries this individually struck talisman, numbered in correspondence with its archival ledger entry in Florence.
+                </p>
+
+                <!-- Finish Switcher Chips -->
+                <div class="talisman-finish-wrapper" style="margin-bottom: 1.5rem;">
+                  <span class="talisman-finish-label" style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-silk-300); display: block; margin-bottom: 0.6rem;">Select Metier Finish:</span>
+                  <div style="display: flex; gap: 8px; flex-wrap: wrap;" id="talisman-finish-group">
+                    <button class="talisman-finish-btn active" data-finish="brass">Florentine Brass</button>
+                    <button class="talisman-finish-btn" data-finish="indigo">Sukumo Indigo</button>
+                    <button class="talisman-finish-btn" data-finish="saffron">Imperial Saffron</button>
+                  </div>
+                </div>
+
+                <!-- Specimen Readout (Dynamically updates with finish) -->
+                <div class="talisman-specs-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 14px; border-radius: 12px; background: rgba(9,8,23,0.7); border: 1px solid rgba(201,162,77,0.25); font-size: 0.72rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                  <div><span style="color: var(--color-silk-300);">Geometry:</span> <strong id="spec-poly" style="color: var(--color-silk-ivory); font-family: monospace;">Möbius Double-Weft</strong></div>
+                  <div><span style="color: var(--color-silk-300);">Reflection:</span> <strong id="spec-metal" style="color: var(--color-burnt-saffron); font-family: monospace;">Specular Luster 88%</strong></div>
+                  <div><span style="color: var(--color-silk-300);">Alloy Origin:</span> <strong id="spec-origin" style="color: var(--color-silk-ivory);">Florence Foundries (Est. 1988)</strong></div>
+                  <div><span style="color: var(--color-silk-300);">Ledger Seal:</span> <strong id="spec-seal" style="color: var(--color-sage-linen); font-family: monospace;">#SUT-FLR-089 (Archival)</strong></div>
+                </div>
+              </div>
+
+              <div class="talisman-actions-row" style="display: flex; gap: 12px; align-items: center; border-top: 1px solid rgba(201,162,77,0.2); padding-top: 1.25rem;">
+                <button id="toggle-talisman-zoom" class="btn-outline magnetic-btn" style="flex: 1; padding: 0.75rem 1rem; font-size: 0.7rem;">
+                  <span class="magnetic-btn-inner">🔍 Inspect Micro-Zoom</span>
+                </button>
+                <button id="talisman-consult-btn" class="btn-primary magnetic-btn" style="padding: 0.75rem 1.4rem; font-size: 0.7rem;">
+                  <span class="magnetic-btn-inner">Request Finish Details →</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Founders & Master Craftsmen (Centered 3D Tilt Cards) -->
+        <div style="margin-bottom: 5rem;">
+          <div style="text-align: center; margin-bottom: 3rem;">
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--color-burnt-saffron); font-weight: 700;">The Masters</span>
+            <h3 class="font-serif" style="font-size: 2.2rem;">Hands Behind the Silhouette</h3>
+          </div>
+          <div class="grid-3">
+            <div class="tilt-card-wrapper">
+              <div class="tilt-card animated-border" style="padding: 1.5rem;">
+                <div class="tilt-card-glare"></div>
+                <div class="tilt-card-holo"></div>
+                <div class="tilt-card-shimmer"></div>
+                <div class="tilt-card-stitch"></div>
+                <div class="tilt-card-inner">
+                  <div class="layer-depth-1" style="width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 2px solid var(--color-antique-brass); margin-bottom: 1.25rem;">
+                    <img src="assets/images/team/founder-elena.webp?v=2" alt="Elena Sutura" style="width: 100%; height: 100%; object-fit: cover;">
+                  </div>
+                  <h4 class="font-serif layer-depth-2" style="font-size: 1.25rem;">Elena Sutura</h4>
+                  <span class="layer-depth-2" style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-antique-brass); font-weight: 600; margin-bottom: 0.75rem;">Creative Director • Firenze</span>
+                  <p class="layer-depth-2" style="font-size: 0.78rem; color: var(--color-silk-300); line-height: 1.6; text-align: center;">Founded the atelier in 1988 to preserve classical Florentine sartorial architecture.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tilt-card-wrapper">
+              <div class="tilt-card animated-border" style="padding: 1.5rem;">
+                <div class="tilt-card-glare"></div>
+                <div class="tilt-card-holo"></div>
+                <div class="tilt-card-shimmer"></div>
+                <div class="tilt-card-stitch"></div>
+                <div class="tilt-card-inner">
+                  <div class="layer-depth-1" style="width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 2px solid var(--color-antique-brass); margin-bottom: 1.25rem;">
+                    <img src="assets/images/team/artisan-kenji.webp?v=2" alt="Kenji Takahashi" style="width: 100%; height: 100%; object-fit: cover;">
+                  </div>
+                  <h4 class="font-serif layer-depth-2" style="font-size: 1.25rem;">Kenji Takahashi</h4>
+                  <span class="layer-depth-2" style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-antique-brass); font-weight: 600; margin-bottom: 0.75rem;">Master Dyer • Kyoto</span>
+                  <p class="layer-depth-2" style="font-size: 0.78rem; color: var(--color-silk-300); line-height: 1.6; text-align: center;">Fourth-generation master of live bacterial Sukumo indigo fermentation from Tokushima.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tilt-card-wrapper">
+              <div class="tilt-card animated-border" style="padding: 1.5rem;">
+                <div class="tilt-card-glare"></div>
+                <div class="tilt-card-holo"></div>
+                <div class="tilt-card-shimmer"></div>
+                <div class="tilt-card-stitch"></div>
+                <div class="tilt-card-inner">
+                  <div class="layer-depth-1" style="width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 2px solid var(--color-antique-brass); margin-bottom: 1.25rem;">
+                    <img src="assets/images/team/tailor-matteo.webp?v=2" alt="Matteo Rossi" style="width: 100%; height: 100%; object-fit: cover;">
+                  </div>
+                  <h4 class="font-serif layer-depth-2" style="font-size: 1.25rem;">Matteo Rossi</h4>
+                  <span class="layer-depth-2" style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-antique-brass); font-weight: 600; margin-bottom: 0.75rem;">Head Tailor • Firenze</span>
+                  <p class="layer-depth-2" style="font-size: 0.78rem; color: var(--color-silk-300); line-height: 1.6; text-align: center;">Over 35 years behind the shears in Savile Row and Florence overseeing floating canvas work.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div style="max-width: 780px; margin: 0 auto 5rem;">
+          <div style="text-align: center; margin-bottom: 2.5rem;">
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--color-burnt-saffron); font-weight: 700;">Concierge Guidance</span>
+            <h3 class="font-serif" style="font-size: 2.2rem;">Frequently Clarified Inquiries</h3>
+          </div>
+
+          <div class="faq-accordion" style="display: flex; flex-direction: column; gap: 1rem;">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item active">
+              <button type="button" class="faq-question-btn" aria-expanded="true">
+                <span class="faq-question-title">How do I choose my precise size across your silhouettes?</span>
+                <span class="faq-arrow-btn" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-answer">
+                <p>Our garments are cut to traditional European proportions with 3.5cm to 5cm internal inlay seam allowances, allowing your personal tailor to customize sleeves or hems easily.</p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question-btn" aria-expanded="false">
+                <span class="faq-question-title">Which countries do you deliver to and what are the delivery times?</span>
+                <span class="faq-arrow-btn" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-answer">
+                <p>We offer complimentary insured DHL Express courier worldwide on all orders exceeding $250. Deliveries within Europe arrive in 1–2 business days; North America and Asia in 2–4 business days.</p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question-btn" aria-expanded="false">
+                <span class="faq-question-title">What is your 30-Day Bespoke Guarantee return policy?</span>
+                <span class="faq-arrow-btn" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-answer">
+                <p>You may request a complimentary exchange or full refund within 30 days of receipt, provided the garment is unworn, in original condition, and with all security ribbons intact.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form & Google Map Embed -->
+        <div class="atelier-inquiries-card" style="border-radius: var(--radius-lg); background: rgba(21, 20, 51, 0.85); border: 1px solid rgba(201,162,77,0.35); padding: 3rem; margin-bottom: 5rem;">
+          <div class="atelier-inquiries-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+            <div class="atelier-info-col">
+              <span class="atelier-concierge-tag" style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--color-burnt-saffron); font-weight: 700;">Personal Concierge</span>
+              <h3 class="font-serif atelier-inquiries-title" style="font-size: 2.2rem; margin: 0.3rem 0 0.8rem;">Atelier Inquiries</h3>
+              <p class="atelier-inquiries-desc" style="font-size: 0.85rem; color: var(--color-silk-300); line-height: 1.6; margin-bottom: 1.5rem;">Connect with our private client team regarding bespoke fit advice or private salon appointments.</p>
+              
+              <div class="atelier-contact-list" style="font-size: 0.8rem; color: var(--color-silk-200); line-height: 1.8; margin-bottom: 1.5rem;">
+                <p>📍 14 Via de' Tornabuoni, 50123 Firenze FI, Italy</p>
+                <p>✉ concierge@ateliersutura.com</p>
+                <p>☎ +39 055 892 4100</p>
+              </div>
+
+              <!-- Map Frame -->
+              <div class="atelier-map-frame" style="height: 160px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(201,162,77,0.3);">
+                <iframe title="Florence Atelier Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.0844738555613!2d11.24831617668612!3d43.77112834413155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a56a6428c049b%3A0xe54fbcfce144c208!2sVia%20de&#39;%20Tornabuoni%2C%20Firenze%20FI%2C%20Italy!5e0!3m2!1sen!2sus!4v1714000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);" loading="lazy"></iframe>
+              </div>
+            </div>
+
+            <!-- Working Contact Form -->
+            <div class="atelier-form-col">
+              <form id="contact-form" style="display: flex; flex-direction: column; gap: 1rem;">
+                <div>
+                  <label style="font-size: 0.7rem; text-transform: uppercase; color: var(--color-silk-300); display: block; margin-bottom: 4px;">Patron Name *</label>
+                  <input type="text" required placeholder="Lady / Sir Name" style="width: 100%; box-sizing: border-box; padding: 0.75rem 1rem; border-radius: var(--radius-sm); background: var(--color-midnight-dark); border: 1px solid rgba(201,162,77,0.3); font-size: 0.8rem; outline: none; color: var(--color-silk-ivory);">
+                </div>
+                <div>
+                  <label style="font-size: 0.7rem; text-transform: uppercase; color: var(--color-silk-300); display: block; margin-bottom: 4px;">Email Address *</label>
+                  <input type="email" required placeholder="patron@ateliersutura.com" style="width: 100%; box-sizing: border-box; padding: 0.75rem 1rem; border-radius: var(--radius-sm); background: var(--color-midnight-dark); border: 1px solid rgba(201,162,77,0.3); font-size: 0.8rem; outline: none; color: var(--color-silk-ivory);">
+                </div>
+                <div>
+                  <label style="font-size: 0.7rem; text-transform: uppercase; color: var(--color-silk-300); display: block; margin-bottom: 4px;">Inquiry Subject</label>
+                  <select style="width: 100%; box-sizing: border-box; padding: 0.75rem 1rem; border-radius: var(--radius-sm); background: var(--color-midnight-dark); border: 1px solid rgba(201,162,77,0.3); font-size: 0.8rem; outline: none; color: var(--color-silk-ivory);">
+                    <option>Bespoke Sizing &amp; Fit Guidance</option>
+                    <option>Reserve Private Salon Fitting in Florence</option>
+                    <option>DHL Express Courier Inquiry</option>
+                  </select>
+                </div>
+                <div>
+                  <label style="font-size: 0.7rem; text-transform: uppercase; color: var(--color-silk-300); display: block; margin-bottom: 4px;">Your Message *</label>
+                  <textarea rows="4" required placeholder="Specify your inquiry..." style="width: 100%; box-sizing: border-box; padding: 0.75rem 1rem; border-radius: var(--radius-sm); background: var(--color-midnight-dark); border: 1px solid rgba(201,162,77,0.3); font-size: 0.8rem; outline: none; color: var(--color-silk-ivory);"></textarea>
+                </div>
+                <button type="submit" class="btn-primary atelier-submit-btn" style="margin-top: 0.5rem; justify-content: center; text-align: center;">Dispatch Transmission →</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Atelier Diary Photo Grid (Local Images Only) -->
+        <div>
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--color-burnt-saffron); font-weight: 700; display: block; margin-bottom: 0.35rem;">Atelier Diary</span>
+            <h3 class="font-serif" style="font-size: 1.8rem; margin: 0;">Scenes from the Workshop</h3>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px;" class="diary-grid">
+            <div style="aspect-ratio: 1/1; border-radius: 12px; overflow: hidden; border: 1px solid rgba(201,162,77,0.3);"><img src="assets/images/gallery/grid-1.webp?v=3" alt="Master artisan at work bench" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+            <div style="aspect-ratio: 1/1; border-radius: 12px; overflow: hidden; border: 1px solid rgba(201,162,77,0.3);"><img src="assets/images/gallery/grid-2.webp?v=3" alt="Botanical tea and natural dye leaves" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+            <div style="aspect-ratio: 1/1; border-radius: 12px; overflow: hidden; border: 1px solid rgba(201,162,77,0.3);"><img src="assets/images/gallery/grid-3.webp?v=3" alt="Tailored charcoal wool blazer" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+            <div style="aspect-ratio: 1/1; border-radius: 12px; overflow: hidden; border: 1px solid rgba(201,162,77,0.3);"><img src="assets/images/gallery/grid-4.webp?v=3" alt="Handcrafted saddle leather tote bag" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+            <div style="aspect-ratio: 1/1; border-radius: 12px; overflow: hidden; border: 1px solid rgba(201,162,77,0.3);"><img src="assets/images/gallery/grid-5.webp?v=3" alt="Atelier salon courtyard presentation" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+            <div style="aspect-ratio: 1/1; border-radius: 12px; overflow: hidden; border: 1px solid rgba(201,162,77,0.3);"><img src="assets/images/gallery/grid-6.webp?v=3" alt="Ecru raw linen tailor shirt" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 4: TRACK ORDER (DASHBOARD & GUEST TRACK)
+         ===================================================================== -->
+    <section id="track-order" class="section-padding bg-weave-light">
+      <div class="container">
+        <!-- Section Header -->
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 3.5rem;">
+          <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--color-burnt-saffron); font-weight: 700; display: block; margin-bottom: 0.4rem;">Patron Logistics Portal</span>
+          <h2 style="font-size: 2.6rem; margin-bottom: 0.8rem;">Track Order &amp; Patron Vault</h2>
+          <div style="width: 50px; height: 2px; background: var(--color-antique-brass); margin: 0 auto 1rem;"></div>
+          <p style="font-size: 0.9rem; color: rgba(15,14,36,0.75);">Live satellite courier tracking, bespoke cutting milestones, Stripe verified allocations, and complimentary exchanges.</p>
+        </div>
+
+        <!-- Guest Quick-Track Form -->
+        <div style="max-width: 680px; margin: 0 auto 4rem; padding: 2.2rem; border-radius: var(--radius-lg); background: var(--color-midnight-indigo); color: var(--color-silk-ivory); border: 1px solid rgba(201,162,77,0.3); box-shadow: var(--shadow-luxe);">
+          <div style="display: flex; align-items: center; gap: 8px; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-burnt-saffron); font-weight: 700; margin-bottom: 1.25rem;">
+            <span>🚚</span> Instant Courier Quick-Track (Guest Access)
+          </div>
+
+          <form id="guest-track-form" style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <input type="text" id="guest-order-input" placeholder="e.g. SUT-89241" required style="flex: 1; min-width: 200px; padding: 0.85rem 1.2rem; border-radius: 9999px; background: var(--color-midnight-dark); border: 1px solid rgba(201,162,77,0.3); font-size: 0.8rem; font-family: monospace; outline: none;">
+            <button type="submit" class="btn-primary" style="padding: 0.85rem 1.8rem;">Query Carrier</button>
+          </form>
+
+          <div style="font-size: 0.7rem; color: var(--color-silk-300); margin-top: 0.75rem;">
+            Try demo order reference: <strong style="color: var(--color-antique-brass); cursor: pointer;" onclick="document.getElementById('guest-order-input').value='SUT-89241'">SUT-89241</strong> or <strong style="color: var(--color-antique-brass); cursor: pointer;" onclick="document.getElementById('guest-order-input').value='SUT-74192'">SUT-74192</strong>
+          </div>
+
+          <!-- Dynamic Result Box -->
+          <div id="guest-track-result"></div>
+        </div>
+
+        <!-- Login Prompt (Shown when not authenticated) -->
+        <div id="patron-login-prompt" style="max-width: 600px; margin: 0 auto; padding: 3rem 2rem; border-radius: var(--radius-lg); background: var(--color-midnight-surface); color: var(--color-silk-ivory); border: 1px solid rgba(201,162,77,0.35); text-align: center; box-shadow: var(--shadow-luxe);">
+          <div style="width: 64px; height: 64px; border-radius: 50%; background: radial-gradient(circle, rgba(201,162,77,0.2) 0%, rgba(9,8,23,0.7) 100%); border: 1.5px solid var(--color-antique-brass); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; box-shadow: 0 0 25px rgba(201,162,77,0.25);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--color-antique-brass)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display: block;">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <h3 class="font-serif" style="font-size: 1.85rem; margin-bottom: 0.6rem; color: #F4EDE0 !important; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Access the Patron Vault</h3>
+          <p style="font-size: 0.88rem; color: #DDD0BB !important; line-height: 1.6; margin-bottom: 1.5rem; opacity: 0.95;">Log in to review complete allocation histories, official VAT receipts, and Gold Weft rewards.</p>
+          
+          <div style="padding: 12px; border-radius: 10px; background: var(--color-midnight-dark); border: 1px solid rgba(201,162,77,0.25); font-family: monospace; font-size: 0.75rem; text-align: left; max-width: 380px; margin: 0 auto 1.5rem;">
+            <span style="font-size: 0.65rem; text-transform: uppercase; color: var(--color-antique-brass); font-family: var(--font-sans); display: block; margin-bottom: 4px;">Demo Credentials:</span>
+            <div>Email: <strong style="color: var(--color-burnt-saffron);">patron@ateliersutura.com</strong></div>
+            <div>Password: <strong style="color: var(--color-burnt-saffron);">sartorial2026</strong></div>
+          </div>
+
+          <button id="prompt-login-btn" class="btn-primary" style="padding: 0.9rem 2.5rem;">Sign In to Vault</button>
+        </div>
+
+        <!-- Patron Vault Dashboard (Revealed upon login) -->
+        <div id="patron-vault-view" style="display: none;">
+          <!-- Welcome Bar & Loyalty Ring -->
+          <div style="padding: 2rem; border-radius: var(--radius-lg); background: var(--color-midnight-surface); color: var(--color-silk-ivory); border: 1px solid rgba(201,162,77,0.3); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1.25rem;">
+              <div style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; border: 2px solid var(--color-antique-brass); flex-shrink: 0;">
+                <img id="vault-user-avatar" src="" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div>
+                <span id="vault-user-tier" style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--color-burnt-saffron); font-weight: 700;"></span>
+                <h3 id="vault-user-name" class="font-serif" style="font-size: 1.6rem; color: #F4EDE0 !important;"></h3>
+                <span id="vault-user-email" style="font-size: 0.75rem; color: var(--color-silk-300);"></span>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 1.5rem;">
+              <div style="text-align: right;">
+                <span style="font-size: 0.65rem; text-transform: uppercase; color: var(--color-antique-brass); display: block;">Guild Reward Credits</span>
+                <strong id="vault-user-points" style="font-size: 1.3rem; font-family: monospace; color: var(--color-burnt-saffron);"></strong>
+              </div>
+              <button id="vault-logout-btn" class="btn-outline" style="padding: 6px 14px; font-size: 0.7rem;">Sign Out</button>
+            </div>
+          </div>
+
+          <!-- 4 Summary Metric Cards (3D Tilt Cards) -->
+          <div class="grid-4" style="margin-bottom: 2.5rem;">
+            <div class="tilt-card-wrapper">
+              <div class="tilt-card animated-border" style="padding: 1rem;">
+                <div class="tilt-card-glare"></div>
+                <div class="tilt-card-holo"></div>
+                <div class="tilt-card-shimmer"></div>
+                <div class="tilt-card-stitch"></div>
+                <div class="tilt-card-inner">
+                  <div class="layer-depth-1" style="font-size: 1.5rem; color: var(--color-antique-brass); margin-bottom: 0.25rem;">📦</div>
+                  <strong id="metric-total-orders" class="font-serif layer-depth-2" style="font-size: 2.2rem; display: block; margin-bottom: 0.2rem;">0</strong>
+                  <span class="layer-depth-2" style="font-size: 0.68rem; text-transform: uppercase; color: var(--color-antique-brass); font-weight: 700;">Commissions</span>
+                </div>
+              </div>
+            </div>
+            <div class="tilt-card-wrapper">
+              <div class="tilt-card animated-border" style="padding: 1rem;">
+                <div class="tilt-card-glare"></div>
+                <div class="tilt-card-holo"></div>
+                <div class="tilt-card-shimmer"></div>
+                <div class="tilt-card-stitch"></div>
+                <div class="tilt-card-inner">
+                  <div class="layer-depth-1" style="font-size: 1.5rem; color: var(--color-burnt-saffron); margin-bottom: 0.25rem;">🚚</div>
+                  <strong id="metric-in-transit" class="font-serif layer-depth-2" style="font-size: 2.2rem; display: block; margin-bottom: 0.2rem; color: var(--color-burnt-saffron);">0</strong>
+                  <span class="layer-depth-2" style="font-size: 0.68rem; text-transform: uppercase; color: var(--color-antique-brass); font-weight: 700;">In Transit Courier</span>
+                </div>
+              </div>
+            </div>
+            <div class="tilt-card-wrapper">
+              <div class="tilt-card animated-border" style="padding: 1rem;">
+                <div class="tilt-card-glare"></div>
+                <div class="tilt-card-holo"></div>
+                <div class="tilt-card-shimmer"></div>
+                <div class="tilt-card-stitch"></div>
+                <div class="tilt-card-inner">
+                  <div class="layer-depth-1" style="font-size: 1.5rem; color: var(--color-sage-linen); margin-bottom: 0.25rem;">✓</div>
+                  <strong id="metric-delivered" class="font-serif layer-depth-2" style="font-size: 2.2rem; display: block; margin-bottom: 0.2rem; color: var(--color-sage-linen);">0</strong>
+                  <span class="layer-depth-2" style="font-size: 0.68rem; text-transform: uppercase; color: var(--color-antique-brass); font-weight: 700;">Delivered</span>
+                </div>
+              </div>
+            </div>
+            <div class="tilt-card-wrapper">
+              <div class="tilt-card animated-border" style="padding: 1rem;">
+                <div class="tilt-card-glare"></div>
+                <div class="tilt-card-holo"></div>
+                <div class="tilt-card-shimmer"></div>
+                <div class="tilt-card-stitch"></div>
+                <div class="tilt-card-inner">
+                  <div class="layer-depth-1" style="font-size: 1.5rem; color: var(--color-antique-brass); margin-bottom: 0.25rem;">💳</div>
+                  <strong id="metric-total-spent" class="font-serif layer-depth-2" style="font-size: 2.2rem; display: block; margin-bottom: 0.2rem;">$0</strong>
+                  <span class="layer-depth-2" style="font-size: 0.68rem; text-transform: uppercase; color: var(--color-antique-brass); font-weight: 700;">Stripe Allocations</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vault Orders List -->
+          <div style="padding: 2rem; border-radius: var(--radius-lg); background: var(--color-midnight-surface); color: var(--color-silk-ivory); border: 1px solid rgba(201,162,77,0.3);">
+            <h3 class="font-serif" style="font-size: 1.4rem; margin-bottom: 1.25rem;">Commission History &amp; Airway Tracking</h3>
+            <div id="vault-orders-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       FOOTER (Strictly Housing Legal Modals & Salons)
+       ===================================================================== -->
+  <!-- =====================================================================
+       HAUTE COUTURE LUXURY FOOTER
+       ===================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- 1. Atelier Craftsmanship & Trust Strip -->
+      <div class="footer-trust-strip">
+        <div class="footer-trust-card">
+          <div class="footer-trust-icon-box" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <div>
+            <h4 class="footer-trust-title">Numbered Editions</h4>
+            <p class="footer-trust-desc">Strictly 50–120 numbered units crafted per drop. Every garment is registered in the Florence archive.</p>
+          </div>
+        </div>
+
+        <div class="footer-trust-card">
+          <div class="footer-trust-icon-box" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div>
+            <h4 class="footer-trust-title">Grade-6A Kyoto Raw Silk</h4>
+            <p class="footer-trust-desc">Zero synthetic fibers. Hand-dyed in authentic botanical indigo & madder vats with pure spring wash.</p>
+          </div>
+        </div>
+
+        <div class="footer-trust-card">
+          <div class="footer-trust-icon-box" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="6" cy="6" r="3"></circle>
+              <circle cx="6" cy="18" r="3"></circle>
+              <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+              <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+              <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <div>
+            <h4 class="footer-trust-title">5cm Bespoke Inlay Seam</h4>
+            <p class="footer-trust-desc">Patterned with generous European internal seam allowances for lifetime artisanal tailoring modifications.</p>
+          </div>
+        </div>
+
+        <div class="footer-trust-card">
+          <div class="footer-trust-icon-box" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <div>
+            <h4 class="footer-trust-title">Insured DHL Courier</h4>
+            <p class="footer-trust-desc">Complimentary doorstep signature courier on orders over $250 with 30-day bespoke fit exchange.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Patron Gazette Subscription Band -->
+      <div class="footer-gazette-wrap">
+        <div class="footer-gazette-card">
+          <div>
+            <span class="footer-gazette-eyebrow">✦ Private Patron Gazette</span>
+            <h3 class="footer-gazette-title">Request Allocation Privileges</h3>
+            <p class="footer-gazette-subtitle">
+              Enroll in the private register to receive confidential preview notices for numbered drops, archival silk releases, and private trunk show invitations.
+            </p>
+          </div>
+          <form id="footer-newsletter-form" class="footer-gazette-form">
+            <div class="footer-gazette-input-row">
+              <input type="email" id="footer-newsletter-email" class="footer-gazette-input" placeholder="Enter private email address..." required aria-label="Email Address">
+              <button type="submit" class="footer-gazette-submit">Enroll →</button>
+            </div>
+            <span class="footer-gazette-note">
+              <span>🔒 10% Inaugural Privilege applied to first bespoke commission</span>
+            </span>
+          </form>
+        </div>
+      </div>
+
+      <!-- 3. Four-Column Haute Sartorial Grid -->
+      <div class="footer-main-grid">
+        <!-- Column 1: Maison & Provenance -->
+        <div>
+          <!-- Exact Navbar-Matched Logo Wordmark -->
+          <a href="#home" class="logo-link" style="margin-bottom: 1.25rem; display: inline-flex;">
+            <div class="logo-icon-box">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="footer-sutura-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FAF7F2"/>
+                    <stop offset="30%" stop-color="#DEBB67"/>
+                    <stop offset="70%" stop-color="#C9A24D"/>
+                    <stop offset="100%" stop-color="#9E7828"/>
+                  </linearGradient>
+                  <linearGradient id="footer-sutura-needle" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#C9A24D"/>
+                    <stop offset="45%" stop-color="#FAF7F2"/>
+                    <stop offset="70%" stop-color="#DEBB67"/>
+                    <stop offset="100%" stop-color="#FFFFFF"/>
+                  </linearGradient>
+                  <linearGradient id="footer-sutura-thread" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#F0A145"/>
+                    <stop offset="60%" stop-color="#E08A2B"/>
+                    <stop offset="100%" stop-color="#B86A18"/>
+                  </linearGradient>
+                  <filter id="footer-needle-glow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#E08A2B" flood-opacity="0.35"/>
+                  </filter>
+                </defs>
+
+                <!-- Outer Bespoke Hand-Stitched Dial -->
+                <circle cx="50" cy="50" r="45" stroke="url(#footer-sutura-gold)" stroke-width="1.3" stroke-dasharray="3.5 3.5" opacity="0.6"/>
+                <circle cx="50" cy="50" r="41" stroke="url(#footer-sutura-gold)" stroke-width="0.75" opacity="0.35"/>
+
+                <!-- Cardinal Atelier Marks -->
+                <polygon points="50,5 51.5,8 50,11 48.5,8" fill="url(#footer-sutura-gold)"/>
+                <polygon points="50,89 51.5,92 50,95 48.5,92" fill="url(#footer-sutura-gold)"/>
+                <polygon points="5,50 8,51.5 11,50 8,48.5" fill="url(#footer-sutura-gold)"/>
+                <polygon points="89,50 92,51.5 95,50 92,48.5" fill="url(#footer-sutura-gold)"/>
+
+                <!-- Sinuous Silk Thread Weaving Through Monogram -->
+                <path d="M 24 76 C 14 62, 18 45, 34 46 C 45 47, 52 40, 50 32 C 48 22, 60 16, 70 23 C 78 28, 80 38, 74 45 C 66 53, 53 56, 46 66 C 40 75, 48 83, 58 81 C 66 79, 71 72, 75 66" 
+                      fill="none" stroke="url(#footer-sutura-thread)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+
+                <!-- Fine Tailoring Needle Piercing Diagonally -->
+                <line x1="20" y1="80" x2="80" y2="20" stroke="url(#footer-sutura-needle)" stroke-width="2.8" stroke-linecap="round"/>
+                <polygon points="77,23 83.5,16.5 80.5,26.5" fill="#FAF7F2" filter="url(#footer-needle-glow)"/>
+                <ellipse cx="26" cy="74" rx="1.2" ry="4.5" transform="rotate(45 26 74)" fill="#0F0E24" stroke="url(#footer-sutura-gold)" stroke-width="0.8"/>
+
+                <!-- Haute Couture Monogram 'S' with Modulated Elegance -->
+                <path d="
+                  M 63 26
+                  C 65 26, 66.5 27.5, 66.5 29.5
+                  C 66.5 31.8, 64.5 33.5, 62 33.5
+                  C 59.8 33.5, 58.5 32.2, 58.5 30.5
+                  C 55.5 26.5, 51.5 24.5, 46.5 24.5
+                  C 38 24.5, 32.5 29.5, 32.5 36.5
+                  C 32.5 43.5, 37.5 47.8, 45 50.8
+                  L 48.5 52.2
+                  C 56.5 55.5, 63 60.5, 63 68.5
+                  C 63 77.5, 55.5 83.5, 45 83.5
+                  C 39.5 83.5, 34 81, 30.5 76.5
+                  C 31.2 75.8, 31.8 74.8, 31.8 73.5
+                  C 31.8 71.2, 29.8 69.5, 27.5 69.5
+                  C 25.2 69.5, 23.5 71.2, 23.5 73.5
+                  C 23.5 77.2, 27.5 82, 33.5 85
+                  C 37 86.8, 41.5 87.5, 46 87.5
+                  C 59 87.5, 68.5 79.5, 68.5 68
+                  C 68.5 59, 62.5 53.5, 53.5 49.5
+                  L 50 48
+                  C 43 45, 38 41.5, 38 35.5
+                  C 38 29.8, 42.5 25.5, 49.5 25.5
+                  C 54.8 25.5, 59.8 27.8, 63 31.5
+                  Z
+                " fill="url(#footer-sutura-gold)"/>
+              </svg>
+            </div>
+            <div class="logo-text-box">
+              <span class="font-serif logo-title">Sutura</span>
+              <span class="logo-subtitle">Firenze • Kyoto</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            Bespoke architectural tailoring born from the dialogue between Tuscan structural suiting and Kyoto botanical dye alchemy. Spun exclusively from Grade-6A raw mulberry silk and Biella virgin wool without mass assembly lines.
+          </p>
+          <div class="footer-guild-badges">
+            <div class="footer-badge-pill">
+              <span style="color: var(--color-burnt-saffron);">⚜</span> Florentine Sartorial Guild N° 084
+            </div>
+            <div class="footer-badge-pill">
+              <span style="color: var(--color-sage-linen);">⛩</span> Kyoto Botanical Heritage Registry
+            </div>
+            <div class="footer-badge-pill">
+              <span style="color: var(--color-antique-brass);">✦</span> GOTS Certified Grade-6A Organic Silk
+            </div>
+          </div>
+          <div class="footer-social-row">
+            <a href="#story" class="footer-social-btn" aria-label="Atelier Heritage & Archive" title="Atelier Story">⚜</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram Lookbook" title="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="mailto:concierge@ateliersutura.com" class="footer-social-btn" aria-label="Email Atelier Concierge" title="Direct Concierge Email">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+            <a href="tel:+390558924100" class="footer-social-btn" aria-label="Telephone Concierge Desk" title="Concierge Desk">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Sartorial Navigation -->
+        <div>
+          <h4 class="footer-col-header">Maison Navigation</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#home">Atelier Home &amp; Craft Pillars</a></li>
+            <li class="footer-link-item"><a href="#collection">Numbered Collection Catalog</a></li>
+            <li class="footer-link-item"><a href="#story">Atelier Provenance &amp; Timeline</a></li>
+            <li class="footer-link-item"><a href="#track-order">Patron Vault &amp; Airway Tracking</a></li>
+            <li class="footer-link-item">
+              <button id="footer-size-guide-btn" class="footer-link-btn" type="button">Sizing &amp; Seam Allowance Guide</button>
+            </li>
+            <li class="footer-link-item">
+              <button id="footer-auth-btn" class="footer-link-btn" type="button">Patron Sign In / Guild Portal</button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Salons & Client Concierge -->
+        <div>
+          <h4 class="footer-col-header">Salons &amp; Concierge</h4>
+          <div class="footer-salon-block">
+            <div class="footer-salon-name">
+              <span>🏛</span> Firenze Atelier &amp; Cutting Room
+            </div>
+            <p class="footer-salon-address">14 Via de' Tornabuoni, 50123 Firenze FI, Italy</p>
+            <p class="footer-salon-hours">Lun–Sab 10:00 – 19:30 CET</p>
+          </div>
+
+          <div class="footer-salon-block">
+            <div class="footer-salon-name">
+              <span>⛩</span> Kyoto Botanical Dye Studio
+            </div>
+            <p class="footer-salon-address">88 Minamiaoyama, Minato-ku, Tokyo / Kyoto, Japan</p>
+            <p class="footer-salon-hours">Mon–Fri 10:00 – 18:00 JST</p>
+          </div>
+
+          <a href="tel:+390558924100" class="footer-concierge-badge">
+            <span>📞</span> Concierge Desk: +39 055 892 4100
+          </a>
+        </div>
+      </div>
+
+      <!-- 4. Footer Bottom: Legal, Security & Copyright Bar -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright-block">
+          <p class="footer-copyright-main">© 2026 Sutura S.r.l. All rights reserved. Handcrafted without compromise.</p>
+          <p class="footer-copyright-sub">P.IVA / VAT: IT 05928410482 • Licensed Sartorial Guild N° 084 • Firenze, Italy</p>
+        </div>
+
+        <div class="footer-payment-strip">
+          <span class="footer-pay-pill">🔒 256-Bit SSL</span>
+          <span class="footer-pay-pill">STRIPE</span>
+          <span class="footer-pay-pill">VISA</span>
+          <span class="footer-pay-pill">MASTERCARD</span>
+          <span class="footer-pay-pill">AMEX</span>
+          <span class="footer-pay-pill">APPLE PAY</span>
+          <span class="footer-pay-pill" style="color: var(--color-sage-linen);">GOTS SILK</span>
+        </div>
+
+        <div class="footer-legal-group">
+          <button class="footer-legal-btn legal-link-btn" data-type="privacy" type="button">Privacy Policy</button>
+          <button class="footer-legal-btn legal-link-btn" data-type="terms" type="button">Terms of Service</button>
+          <button class="footer-legal-btn legal-link-btn" data-type="shipping" type="button">Shipping &amp; Returns</button>
+          <button id="footer-cookie-trigger-btn" class="footer-legal-btn" type="button">Cookie Protocol</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       DRAWERS & MODALS
+       ===================================================================== -->
+  <div id="drawer-overlay" class="drawer-overlay"></div>
+
+  <!-- Cart Drawer -->
+  <div id="cart-drawer" class="drawer-panel">
+    <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid rgba(201,162,77,0.2);">
+      <h3 class="font-serif" style="font-size: 1.3rem;">Sartorial Bag</h3>
+      <button id="close-cart-drawer" style="font-size: 1.4rem; color: var(--color-silk-ivory); cursor: pointer;">✕</button>
+    </div>
+
+    <!-- Free Shipping Bar -->
+    <div style="padding: 1rem 0; border-bottom: 1px solid rgba(201,162,77,0.2);">
+      <span id="free-shipping-text" style="font-size: 0.72rem; display: block; margin-bottom: 6px; color: var(--color-silk-300);"></span>
+      <div style="width: 100%; height: 5px; border-radius: 9999px; background: var(--color-midnight-dark); overflow: hidden; border: 1px solid rgba(201,162,77,0.2);">
+        <div id="free-shipping-progress" style="height: 100%; background: linear-gradient(90deg, var(--color-burnt-saffron), var(--color-antique-brass)); width: 0%; transition: width 0.4s;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Scroll -->
+    <div id="cart-items-container" style="flex: 1; overflow-y: auto; padding: 1rem 0;"></div>
+
+    <!-- Cart Footer & Checkout -->
+    <div style="padding-top: 1rem; border-top: 1px solid rgba(201,162,77,0.2);">
+      <div style="display: flex; gap: 8px; margin-bottom: 1rem;">
+        <input type="text" id="promo-input" placeholder="Privilege Code (try SUTURA10)" style="flex: 1; padding: 8px 12px; border-radius: 8px; background: var(--color-midnight-dark); border: 1px solid rgba(201,162,77,0.3); font-size: 0.72rem; font-family: monospace; outline: none;">
+        <button id="apply-promo-btn" style="padding: 8px 14px; border-radius: 8px; background: rgba(201,162,77,0.2); color: var(--color-antique-brass); font-size: 0.72rem; font-weight: 700; text-transform: uppercase;">Apply</button>
+      </div>
+
+      <div style="font-size: 0.78rem; line-height: 1.8; color: var(--color-silk-300); margin-bottom: 1.25rem;">
+        <div style="display: flex; justify-content: space-between;">
+          <span>Subtotal:</span>
+          <span id="cart-subtotal" style="color: var(--color-silk-ivory); font-family: monospace;">$0.00</span>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <span>DHL Express Courier:</span>
+          <span id="cart-shipping" style="color: var(--color-silk-ivory); font-family: monospace;">Complimentary</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 1rem; font-weight: 700; color: var(--color-silk-ivory); border-top: 1px solid rgba(201,162,77,0.2); padding-top: 6px; margin-top: 6px;">
+          <span>Total:</span>
+          <span id="cart-total" style="color: var(--color-burnt-saffron); font-family: monospace;">$0.00 USD</span>
+        </div>
+      </div>
+
+      <button id="checkout-btn" class="btn-primary" style="width: 100%; padding: 1rem;">Proceed to Checkout 🔒</button>
+      <span style="font-size: 0.65rem; color: var(--color-silk-300); text-align: center; display: block; margin-top: 8px;">256-Bit Stripe Encrypted • 30-Day Bespoke Guarantee</span>
+    </div>
+  </div>
+
+  <!-- Size Guide Drawer -->
+  <div id="size-guide-drawer" class="drawer-panel">
+    <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; border-bottom: 1px solid rgba(201,162,77,0.2);">
+      <h3 class="font-serif" style="font-size: 1.3rem;">📏 Sizing &amp; Measurement Guide</h3>
+      <button id="close-size-guide" style="font-size: 1.4rem; color: var(--color-silk-ivory); cursor: pointer;">✕</button>
+    </div>
+    <div style="flex: 1; overflow-y: auto; padding: 1.5rem 0; font-size: 0.78rem; color: var(--color-silk-200); line-height: 1.7;">
+      <p style="margin-bottom: 1rem;">All Sutura garments are patterned to traditional European proportions with a generous <strong>3.5cm to 5cm internal inlay seam allowance</strong> to accommodate bespoke tailoring adjustments.</p>
+      
+      <table style="width: 100%; text-align: left; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.72rem;">
+        <thead>
+          <tr style="border-bottom: 1px solid rgba(201,162,77,0.3); color: var(--color-antique-brass);">
+            <th style="padding: 6px;">Size</th>
+            <th style="padding: 6px;">Chest (cm)</th>
+            <th style="padding: 6px;">Waist (cm)</th>
+            <th style="padding: 6px;">Sleeve (cm)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid rgba(201,162,77,0.1);"><td style="padding: 6px;">XS (34/44)</td><td style="padding: 6px;">88-92</td><td style="padding: 6px;">72-76</td><td style="padding: 6px;">62</td></tr>
+          <tr style="border-bottom: 1px solid rgba(201,162,77,0.1);"><td style="padding: 6px;">S (36/46)</td><td style="padding: 6px;">92-96</td><td style="padding: 6px;">76-80</td><td style="padding: 6px;">63</td></tr>
+          <tr style="border-bottom: 1px solid rgba(201,162,77,0.1);"><td style="padding: 6px;">M (38/48)</td><td style="padding: 6px;">96-102</td><td style="padding: 6px;">80-86</td><td style="padding: 6px;">64.5</td></tr>
+          <tr style="border-bottom: 1px solid rgba(201,162,77,0.1);"><td style="padding: 6px;">L (40/50)</td><td style="padding: 6px;">102-108</td><td style="padding: 6px;">86-92</td><td style="padding: 6px;">66</td></tr>
+          <tr><td style="padding: 6px;">XL (42/52)</td><td style="padding: 6px;">108-114</td><td style="padding: 6px;">92-98</td><td style="padding: 6px;">67.5</td></tr>
+        </tbody>
+      </table>
+
+      <div style="padding: 12px; border-radius: 8px; background: rgba(15,14,36,0.6); border: 1px solid rgba(201,162,77,0.3);">
+        <strong style="color: var(--color-burnt-saffron); display: block; margin-bottom: 4px;">Concierge Fit Advice:</strong>
+        If you find yourself between two sizes, we advise selecting the larger size; the generous inlay allows seamless localized tapering.
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div id="quickview-modal" class="modal-overlay">
+    <div class="modal-card" style="max-width: 840px;">
+      <button class="close-modal-btn" style="position: absolute; top: 18px; right: 18px; font-size: 1.4rem; color: var(--color-silk-ivory); z-index: 10;">✕</button>
+      <div id="quickview-content"></div>
+    </div>
+  </div>
+
+  <!-- Patron Auth Modal -->
+  <div id="auth-modal" class="modal-overlay">
+    <div class="modal-card" style="max-width: 440px;">
+      <button class="close-modal-btn" style="position: absolute; top: 18px; right: 18px; font-size: 1.4rem; color: var(--color-silk-ivory);">✕</button>
+      
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <span style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--color-burnt-saffron); font-weight: 700;">The Guild Portal</span>
+        <h3 class="font-serif" style="font-size: 1.8rem;">Patron Sign In</h3>
+      </div>
+
+      <div id="autofill-demo-btn" style="padding: 10px; border-radius: 10px; background: var(--color-midnight-dark); border: 1px solid rgba(201,162,77,0.3); font-size: 0.72rem; cursor: pointer; margin-bottom: 1.25rem;">
+        <strong style="color: var(--color-burnt-saffron); display: block;">⚡ Click to Autofill Demo Account:</strong>
+        <span style="font-family: monospace;">patron@ateliersutura.com / sartorial2026</span>
+      </div>
+
+      <form id="auth-form" style="display: flex; flex-direction: column; gap: 1rem;">
+        <div>
+          <label style="font-size: 0.7rem; text-transform: uppercase; color: var(--color-silk-300); display: block; margin-bottom: 4px;">Email Address</label>
+          <input type="email" id="auth-email" required placeholder="patron@ateliersutura.com" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); background: var(--color-midnight-dark); border: 1px solid rgba(201,162,77,0.3); font-size: 0.8rem; outline: none;">
+        </div>
+        <div>
+          <label style="font-size: 0.7rem; text-transform: uppercase; color: var(--color-silk-300); display: block; margin-bottom: 4px;">Security Password</label>
+          <input type="password" id="auth-password" required placeholder="••••••••••••" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); background: var(--color-midnight-dark); border: 1px solid rgba(201,162,77,0.3); font-size: 0.8rem; outline: none;">
+        </div>
+        <button type="submit" class="btn-primary" style="margin-top: 0.5rem; padding: 0.9rem;">Authorize &amp; Enter Vault</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Legal Modal (Privacy, Terms, Shipping) -->
+  <div id="legal-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button class="close-modal-btn" style="position: absolute; top: 18px; right: 18px; font-size: 1.4rem; color: var(--color-silk-ivory);">✕</button>
+      <h3 id="legal-modal-title" class="font-serif" style="font-size: 1.8rem; margin-bottom: 1rem;"></h3>
+      <div id="legal-modal-body" style="font-size: 0.82rem; color: var(--color-silk-200); line-height: 1.7;"></div>
+      <button class="close-modal-btn btn-primary" style="margin-top: 1.5rem; width: 100%;">Acknowledge &amp; Close</button>
+    </div>
+  </div>
+
+  <!-- Order Confirmation Modal (Triggered by Stripe test checkout) -->
+  <div id="order-confirmation-modal" class="modal-overlay">
+    <div class="modal-card" style="text-align: center;">
+      <button class="close-modal-btn" style="position: absolute; top: 18px; right: 18px; font-size: 1.4rem; color: var(--color-silk-ivory);">✕</button>
+      <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(169,181,160,0.2); border: 2px solid var(--color-sage-linen); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; color: var(--color-sage-linen); margin: 0 auto 1rem;">
+        ✓
+      </div>
+      <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--color-burnt-saffron); font-weight: 700;">Payment Confirmed via Stripe</span>
+      <h3 class="font-serif" style="font-size: 2rem; margin: 0.25rem 0 0.8rem;">Commission Reserved</h3>
+      <p style="font-size: 0.85rem; color: var(--color-silk-200); margin-bottom: 1.5rem;">Your order has been authorized and dispatched to the Florence atelier cutting room.</p>
+      
+      <div style="padding: 1rem; border-radius: 12px; background: var(--color-midnight-dark); border: 1px solid rgba(201,162,77,0.3); font-size: 0.78rem; text-align: left; line-height: 2; margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between;"><span>Order Reference:</span> <strong id="conf-order-id" style="color: var(--color-burnt-saffron); font-family: monospace;"></strong></div>
+        <div style="display: flex; justify-content: space-between;"><span>Amount Paid:</span> <strong id="conf-order-total" style="font-family: monospace;"></strong></div>
+        <div style="display: flex; justify-content: space-between;"><span>Courier:</span> <span id="conf-carrier"></span></div>
+      </div>
+
+      <button onclick="document.getElementById('order-confirmation-modal').classList.remove('active'); document.getElementById('track-order').scrollIntoView({behavior:'smooth'});" class="btn-primary" style="width: 100%;">
+        View Tracking in Patron Vault →
+      </button>
+    </div>
+  </div>
+
+  <!-- Floating Scroll Up Button with Circular Progress -->
+  <button id="scroll-to-top" class="scroll-up-btn" aria-label="Scroll to top of page" title="Scroll to top">
+    <svg class="scroll-progress-ring" width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+      <circle class="scroll-progress-track" cx="24" cy="24" r="21" />
+      <circle id="scroll-progress-fill" class="scroll-progress-fill" cx="24" cy="24" r="21" />
+    </svg>
+    <div class="scroll-up-content">
+      <svg class="scroll-up-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+      </svg>
+    </div>
+  </button>
+
+  <!-- Toast Notification -->
+  <div id="toast">
+    <span style="color: var(--color-burnt-saffron);">✦</span>
+    <span id="toast-text"></span>
+  </div>
+
+  <!-- Cookie Consent Bar -->
+  <div id="cookie-consent-bar" style="display: none; position: fixed; bottom: 20px; left: 20px; max-width: 380px; z-index: 999; padding: 1.25rem; border-radius: var(--radius-md); background: rgba(15,14,36,0.95); backdrop-filter: blur(12px); border: 1px solid rgba(201,162,77,0.4); box-shadow: var(--shadow-luxe); font-size: 0.75rem;">
+    <strong style="color: var(--color-burnt-saffron); display: block; margin-bottom: 4px;">Patron Privacy &amp; Cookies:</strong>
+    <p style="color: var(--color-silk-300); line-height: 1.5; margin-bottom: 10px;">We use essential privacy cookies exclusively to persist your bag and maintain secure Stripe checkout.</p>
+    <div style="display: flex; justify-content: flex-end;">
+      <button id="accept-cookie-btn" class="btn-primary" style="padding: 6px 16px; font-size: 0.7rem;">Accept &amp; Continue</button>
+    </div>
+  </div>
+
+  <!-- Pure Scripts (Zero Node.js runtime required) -->
+  <script src="site-data.js?v=9.0"></script>
+  <script src="app.js?v=9.1"></script>
+</body>
+</html>
